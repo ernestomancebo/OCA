@@ -63,3 +63,97 @@ Executing "java EJava java one one", the output: "java one"
 		System.out.println(args[0] + " " + args[1]);
 		}
 		}
+
+Twist in the Tale 1.4
+
+How can you declare a class Curtainin a package building so that it isn’t visible outside the package building?
+
+	package building;
+	public class Curtain {}
+
+	package building;
+	protected class Curtain {}
+
+*	package building;
+	class Curtain {}
+
+	An protected can be extended from other packages
+
+*	package building;
+	private class Curtain {}
+
+	private no one can see it..
+
+Twist in the Tale 2.1
+
+Determine the output of the following code:
+	class TwistInTaleNumberSystems {
+		public static void main (String args[]) {
+			int baseDecimal = 267;
+			int octVal = 0413;
+			int hexVal = 0x10B;
+			int binVal = 0b100001011;
+			System.out.println (baseDecimal + octVal);
+			System.out.println (hexVal + binVal);
+		}
+	}
+
+// 534, ambos
+
+Determine which of these does this job correctly:
+	long var1 = 0_100_267_760;
+	long var2 = 0_x_4_13;
+	long var3 = 0b_x10_BA_75;
+	long var4 = 0b_10000_10_11;
+*	long var5 = 0xa10_AG_75;
+*	long var6 = 0x1_0000_10;
+	long var7 = 100__12_12;
+
+Twist in the Tale2.2
+
+Examine the following code initializations and select the incorrect answers:
+
+	public class Foo {
+		public static void main (String args[]) {
+			boolean b1, b2, b3, b4, b5, b6; // line 1
+			b1 = b2 = b3 = true; 			// line 2
+			b4 = 0; 						// line 3
+			b5 = 'false'; 					// line 4
+			b6 = yes; 						// line 5
+		}
+	}
+
+*	a The code on line 1 will fail to compile.
+*	b Can’t initialize multiple variables like the code on line 2.
+*	c The code on line 3 is correct.
+	d Can’t assign 'false'to a boolean variable.
+*	e The code on line 5 is correct.
+
+Twist in the Tale 2.3
+
+Your task is to evaluate the modified expression and determine the output of the following code:
+
+int a = 10;
+a = ++a + a + --a - --a + a++;
+System.out.println (a);
+
+Try to form the expression by replacing the values of variable ain the expression and explain each of them, the way it was done for you in figure 2.17.
+*	32
+
+Twist in the Tale 2.4
+
+Examine the following code and circle {} the expressions that you think will evaluate. Draw a square [] around the expressions that you think may not execute. (For
+example, on line 1, both a++ > 10 and ++b < 30will evaluate .)
+
+class TwistInTaleLLogicalOperators {
+	public static void main (String args[]) {
+		int a = 10;
+		int b = 20;
+		int c = 40;
+		System.out.println({a++ > 10} || {++b < 30}); // line1
+		System.out.println({a > 90}  && [++b < 30]);
+		System.out.println({!(c>20)} && [a==10] );
+		System.out.println({a >= 90} || {a <= 33} && {b == 10});
+		System.out.println({a >= 99} && [a <= 33] || [b == 10]);
+	}
+}

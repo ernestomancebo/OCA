@@ -1,0 +1,85 @@
+Twist in the Tale 1.1
+
+// Contents of Multiple.java
+public interface Printable {
+//.. we are not detailing this part
+}
+interface Movable {
+//.. we are not detailing this part
+}
+
+Options: 
+	a A Java source code file cannot define multiple interfaces.
+	b A Java source code file can only define multiple classes.
+ 	c A Java source code file can define multiple interfaces and classes.
+ 	d The previous class will fail to compile
+
+Twist in the Tale 1.2
+
+// contents of Multiple2.java
+interface Printable {
+//.. we are not detailing this part
+}
+class MyClass {
+//.. we are not detailing this part
+}
+interface Movable {
+//.. we are not detailing this part
+}
+public class Car {
+//.. we are not detailing this part
+}
+public interface Multiple2 {}
+
+Options:
+	a The code fails to compile.
+	b The code compiles successfully.
+	c Removing the definition of class Car will compile the code.
+	d Changing class Car to a non-public class will compile the code.
+	e Changing class Multiple2 to a non-public class will compile the code.
+
+Twist in the Tale 1.3
+
+Executing "java EJava java one one", the output: "java one"
+
+
+	a 	class EJava {
+		public static void main(String sun[]) {
+		System.out.println(sun[0] + " " + sun[2]);
+		}
+		}
+	b 	class EJava {
+		static public void main(String phone[]) {
+		System.out.println(phone[0] + " " + phone[1]);
+		}
+		}
+	c 	class EJava {
+		static public void main(String[] arguments[]) {		
+		System.out.println(arguments[0] + " " + arguments[1]);
+		}
+		}
+	d 	class EJava {
+		static void public main(String args[]) {
+		System.out.println(args[0] + " " + args[1]);
+		}
+		}
+
+Twist in the Tale 1.4
+
+How can you declare a class Curtainin a package building so that it isn’t visible outside the package building?
+
+	package building;
+	public class Curtain {}
+
+	package building;
+	protected class Curtain {}
+
+	package building;
+	class Curtain {}
+
+	An protected can be extended from other packages
+
+	package building;
+	private class Curtain {}
+
+	private no one can see it..

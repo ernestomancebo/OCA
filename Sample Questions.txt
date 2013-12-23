@@ -1,0 +1,343 @@
+*  Contestadas
+&* Contestadas erroneas
+$  No seleccionadas y estan correctas
+
+/*
+##################################################
+Topic 1
+##################################################
+*/
+
+Q1-1.What are the valid components of a Java source file (choose all that apply):
+
+* 	a package statement
+*	b import statements
+*	c methods
+*	d variables
+	e Java compiler
+	f Java Runtime Environment
+
+Q1-2. The  following  numbered  list  of  Java  class  components  is  not  in  any  particular order. Select the correct order of their occurrence in a Java class (choose all that apply):
+
+1 comments
+2 import statement
+3 package statement
+4 methods
+5 class declaration
+6 variables
+
+*	a 1, 3, 2, 5, 6, 4
+*	b 3, 1, 2, 5, 4, 6
+	c 3, 2, 1, 4, 5, 6
+*	d 3, 2, 1, 5, 6, 4
+
+Q1-3.Which of the following examples define the correct Java class structure?
+
+	a #connect java compiler;
+	#connect java virtual machine;
+	class EJavaGuru {}
+
+	b package java compiler;
+	import java virtual machine;
+	class EJavaGuru {}
+
+	c import javavirtualmachine.*;
+	package javacompiler;
+	class EJavaGuru {
+	void method1() {}
+	int count;
+	}
+
+*	d package javacompiler;
+	import javavirtualmachine.*;
+	class EJavaGuru {
+	void method1() {}
+	int count;
+	}
+
+	e #package javacompiler;
+	$import javavirtualmachine;
+	class EJavaGuru {
+	void method1() {}
+	int count;
+	}
+
+	f package javacompiler;
+	import javavirtualmachine;
+	Class EJavaGuru {
+	void method1() {}
+	int count;
+	}
+
+Q1-4.Given the following contents of the Java source code file MyClass.java, select the correct options:
+
+// contents of MyClass.java
+package com.ejavaguru;
+import java.util.Date;
+class Student {}
+class Course {}
+
+	a The imported class, java.util.Date, can be accessed only in the class Student.
+*	b The imported class, java.util.Date, can be accessed by both the Studentand
+	Courseclasses.
+*	c Both of the classes Student and Course are defined in the package com.ejavaguru.
+	d Only  the  class Student is  defined  in  the  package com.ejavaguru. The class
+	Course is defined in the default Java package.
+
+Q1-5.Given the following definition of the class EJavaGuru,
+
+class EJavaGuru {
+public static void main(String[] args) {
+System.out.println(args[1]+":"+ args[2]+":"+ args[3]);
+}
+}
+
+what is the output of the previous class, if it is executed using the following command:
+
+	java EJavaGuru one two three four
+
+	a one:two:three
+	b EJavaGuru:one:two
+	c java:EJavaGuru:one
+*	d two:three:four
+
+Q1-6.Which of the following options, when inserted at //INSERT CODE HERE, will print out EJavaGuru?
+
+public class EJavaGuru {
+// INSERT CODE HERE 
+{
+System.out.println("EJavaGuru");
+}
+}
+
+	a public void main (String[] args)
+	b public void main(String args[])
+*	c static public void main (String[] array)
+	d public static void main (String args)
+	e static public main (String args[])
+
+Q1-7.Select the correct options:
+
+$	a You can start the execution of a Java application through the main method.
+	b The Java compiler calls and executes the main method.
+*	c The Java Virtual Machine calls and executes the main method.
+	d A class calls and executes the main method.
+
+Q1-8.A class Course is defined in a package com.ejavaguru. Given that the physical location of the corresponding class file is /mycode/com/ejavaguru/Course.class and execution takes place within the mycode directory, which of the following lines of code, when
+inserted at // INSERT CODE HERE, will import the Courseclass into the class MyCourse?
+// INSERT CODE HERE
+class MyCourse {
+Course c;
+}
+
+	a import mycode.com.ejavaguru.Course;
+*	b import com.ejavaguru.Course;
+	c import mycode.com.ejavaguru;
+	d import com.ejavaguru;
+	e import mycode.com.ejavaguru*;
+	f import com.ejavaguru*;
+
+Q1-9.Examine the following code:
+class Course {
+String courseName;
+}
+class EJavaGuru {
+public static void main(String args[]) {
+Course c = new Course();
+c.courseName = "Java";
+System.out.println(c.courseName);
+}
+}
+
+Which of the following statements will be true if the variable courseName is defined as a private variable?
+
+	a class EJavaGuru will print Java.
+	b class EJavaGuru will print null.
+*	c class EJavaGuru won’t compile.
+	d class EJavaGuru will throw an exception at runtime.
+
+Q1-10.Given the following definition of the class Course,
+
+package com.ejavaguru.courses;
+class Course {
+public String courseName;
+}
+
+what’s the output of the following code?
+
+package com.ejavaguru;
+import com.ejavaguru.courses.Course;
+class EJavaGuru {
+public static void main(String args[]) {
+Course c = new Course();
+c.courseName = "Java";
+System.out.println(c.courseName);
+}
+}
+
+	a The class EJavaGuru will print Java.
+	b The class EJavaGuru will print null.
+*	c The class EJavaGuru won’t compile.
+	d The class EJavaGuru will throw an exception at runtime.
+
+Q1-11.Given the following code, select the correct options:
+
+package com.ejavaguru.courses;
+class Course {
+public String courseName;
+public void setCourseName(private String name) {
+courseName = name;
+}
+}
+
+*	a You can’t define a method argument as a private variable.
+	b A method argument should be defined with either public or default accessibility.
+	c For overridden methods, method arguments should be defined with protected accessibility.
+	d None of the above.
+
+/*
+##################################################
+Topic 2
+##################################################
+*/
+
+Q2-1.Select all incorrect statements:
+
+	a A programmer can’t define a new primitive data type.
+*	b A programmer can define a new primitive data type.
+*	c Once assigned, the value of a primitive can’t be modified.
+*	d A value can’t be assigned to a primitive variable.
+
+Q2-2.Which of the options are correct for the following code?
+
+	public class Prim {								// line 1
+		public static void main(String[] args) {	// line 2
+			char a = 'a'; 							// line 3
+			char b = -10; 							// line 4
+			char c = '1'; 							// line 5
+			integer d = 1000; 						// line 6
+			System.out.println(++a + b++ * c - d); 	// line 7
+		} 											// line 8
+	} 												// line 9
+
+*	a Code at line 4 fails to compile.
+	b Code at line 5 fails to compile.
+$	c Code at line 6 fails to compile.
+$	d Code at line 7 fails to compile.
+
+Q2-3.What is the output of the following code?
+
+	public class Foo {
+		public static void main(String[] args) {
+			int a = 10;
+			long b = 20;
+			short c = 30;
+			System.out.println(++a + b++ * c);
+		}
+	}
+
+*	a 611
+	b 641
+	c 930
+	d 960
+
+Q2-4.Select the option(s) that is/are the best choice for the following:
+___________________ should be used to store a count of cars manufactured by a car
+manufacturing  company.  _________________  should  be  used  to  store whether this
+car  manufacturing  company  modifies  the  interiors  on  the  customer’s  request.
+____________ should be used to store the maximum speed of a car.
+
+$	a long, boolean, double
+	b long, int, float
+	c char, int, double
+*	d long, boolean, float
+
+Q2-5.Which of the following options contain correct code to declare and initialize
+variables to store whole numbers?
+
+	a bit a = 0;
+	b integer a2 = 7;
+*	c long a3 = 0x10C;
+*	d short a4 = 0512;
+&*	e double a5 = 10;
+*	f byte a7 = -0;
+*	g long a8 = 123456789;
+
+Q2-6.Select the options that, when inserted at // INSERT CODE HERE, will make the following code output a value of 11:
+
+	public class IncrementNum {
+		public static void main(String[] args) {
+			int ctr = 50;
+			// INSERT CODE HERE
+			System.out.println(ctr % 20);
+		}
+	}
+
+*	a ctr += 1;
+&*	b ctr =+ 1;
+*	c ++ctr;
+	d ctr = 1;
+
+Q2-7.What is the output of the following code?
+
+int a = 10;
+int b = 20;
+int c = (a * (b + 2)) - 10-4 * ((2*2) - 6;
+System.out.println(c);
+
+	a 218
+	b 232
+	c 246
+*	d Compilation error
+
+Q2-8.What is true about the following lines of code?
+
+boolean b = false;
+int i = 90;
+System.out.println(i >= b);
+
+	a Code prints true
+	b Code prints false
+	c Code prints 90 >= false
+*	d Compilation error
+
+Q2-9.Examine the following code and select the correct options:
+
+	public class Prim { 								// line 1
+		public static void main(String[] args) { 		// line 2
+		int num1 = 12; 									// line 3
+		float num2 = 17.8f; 							// line 4
+		boolean eJavaResult = true; 					// line 5
+		boolean returnVal = num1 >= 12 && num2 < 4.567 
+		|| eJavaResult == true; 						// line 6
+		System.out.println(returnVal); 					// line 7
+		} 												// line 8
+	} 													// line 9
+
+	a Code prints false
+*	b Code prints true
+*	c Code will print true if code on line 6 is modified to the following:
+		boolean returnVal = (num1 >= 12 && num2 < 4.567) || eJavaResult == 	true;
+	d Code will print true if code on line 6 is modified to the following:
+		boolean returnVal = num1 >= 12 && (num2 < 4.567 || eJavaResult == false);
+
+Q2-10.If the functionality of the operators = and >were to be swapped in Java (for the
+code on line numbers 4, 5, and 6), what would be the result of the following code?
+
+boolean myBool = false; 				// line 1
+int yourInt = 10; 						// line 2
+float hisFloat = 19.54f; 				// line 3
+System.out.println(hisFloat > yourInt); // line 4
+System.out.println(yourInt = 10); 		// line 5
+System.out.println(myBool > false); 	// line 6
+
+	a true
+	true
+	false
+$	b 10.0
+	false
+	false
+	c false
+	false
+	false
+&*	d Compilation error
