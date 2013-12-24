@@ -143,7 +143,7 @@ Try to form the expression by replacing the values of variable ain the expressio
 Twist in the Tale 2.4
 
 Examine the following code and circle {} the expressions that you think will evaluate. Draw a square [] around the expressions that you think may not execute. (For
-example, on line 1, both a++ > 10 and ++b < 30will evaluate .)
+example, on line 1, both a++ > 10 and ++b < 30 will evaluate .)
 
 class TwistInTaleLLogicalOperators {
 	public static void main (String args[]) {
@@ -157,3 +157,28 @@ class TwistInTaleLLogicalOperators {
 		System.out.println({a >= 99} && [a <= 33] || [b == 10]);
 	}
 }
+
+Twist in the Tale 3.1
+
+Select the correct output of the class TestPhonefrom the given options:
+
+class Phone {
+	String phoneNumber = "123456789";
+	void setNumber () {
+		String phoneNumber;
+		phoneNumber = "987654321";
+	}
+}
+
+class TestPhone {
+	public static void main(String[] args) {
+		Phone p1 = new Phone();
+		p1.setNumber();
+		System.out.println (p1.phoneNumber);
+	}
+}
+
+*	a 123456789
+	b 987654321
+	c No output
+	d The class Phone will not compile.
