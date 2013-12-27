@@ -348,3 +348,240 @@ Topic 3
 ##################################################
 */
 
+Q3-1.How can you include encapsulation in your class design?
+
+*	a Define instance variables as private members.
+*	b Define public methods to access and modify the instance variables.
+	c Define some of the instance variables as public members.
+	d All of the above.
+
+Q3-2.Examine the following code and select the correct option(s):
+
+public class Person {
+	public int height;
+	public void setHeight(int newHeight) {
+		if (newHeight <= 300)
+		height = newHeight;
+	}
+}
+
+	a The height of a Person can never be set to more than 300.
+	b The previous code is an example of a well-encapsulated class.
+	c The  class  would  be  better  encapsulated  if  the  height  validation  weren’t  set
+	to 300.
+*	d Even though the class isn’t well encapsulated, it can be inherited by other classes.
+
+Q3-3. Which  of  the  following  methods  correctly  accepts  three  whole  numbers  as
+method arguments and returns their sum as a decimal number?
+
+	a public void addNumbers(byte arg1, int arg2, int arg3) {
+	double sum = arg1 + arg2 + arg3;
+	}
+*	b public double subtractNumbers(byte arg1, int arg2, int arg3) {
+	double sum = arg1 + arg2 + arg3;
+	return sum;
+	}
+	c public double numbers(long arg1, byte arg2, double arg3) {
+	return arg1 + arg2 + arg3;
+	}
+&	d public float wakaWakaAfrica(long a1, long a2, short a977) {
+	double sum = a1 + a2 + a977;
+	return (float)sum;
+	}
+
+LONG IS ALSO AN WHOLE NUMBER!!
+
+Q3-4.Which of the following statements are true?
+
+&	a If the return type of a method is int, the method can return a value of type byte.
+*	b A method may or may not return a value.
+*	c If the return type of a method is void, it can define a return statement without
+	a value, as follows: 
+		return;
+*	d A method may or may not accept any method arguments.
+	e A method must accept at least one method argument or define its return type.
+	f A method whose return type is String can’t return null.
+
+BYTE CAN PERFECTLY FIT INTO AN INT!!
+
+Q3-5.Given the following definition of class Person,
+
+class Person {
+	public String name;
+	public int height;
+}
+
+what is the output of the following code?
+
+class EJavaGuruPassObjects1 {
+	public static void main(String args[]) {
+		Person p = new Person();
+		p.name = "EJava";
+		anotherMethod(p);
+		System.out.println(p.name);
+		someMethod(p);
+		System.out.println(p.name);
+	}
+
+	static void someMethod(Person p) {
+		p.name = "someMethod";
+		System.out.println(p.name);
+	}
+
+	static void anotherMethod(Person p) {
+		p = new Person();
+		p.name = "anotherMethod";
+		System.out.println(p.name);
+	}
+}
+
+	a anotherMethod
+	anotherMethod
+	someMethod
+	someMethod
+
+*	b anotherMethod
+	EJava
+	someMethod
+	someMethod
+
+	c anotherMethod
+	EJava
+	someMethod
+	EJava
+
+	d Compilation error.
+
+Q3-6.What is the output of the following code?
+
+class EJavaGuruPassPrim {
+	public static void main(String args[]) {
+		int ejg = 10;
+		anotherMethod(ejg);
+		System.out.println(ejg);
+		someMethod(ejg);
+		System.out.println(ejg);
+	}
+
+	static void someMethod(int val) {
+		++val;
+		System.out.println(val);
+	}
+
+	static void anotherMethod(int val) {
+		val = 20;
+		System.out.println(val);
+	}
+}
+
+	a 20
+	10
+	11
+	11
+
+	b 20
+	20
+	11
+	10
+
+*	c 20
+	10
+	11
+	10
+
+	d Compilation error
+
+Q3-7.Given the following signature of method eJava, choose the options that correctly overload this method:
+
+public String eJava(int age, String name, double duration)
+
+	a private String eJava(int val, String firstName, double dur)
+	b public void eJava(int val1, String val2, double val3)
+&	c String eJava(String name, int age, double duration)
+*	d float eJava(double name, String age, byte duration)
+*	e ArrayList<String> eJava()
+*	f char[] eJava(double numbers)
+*	g String eJava()
+
+Q3-8.Given the following code,
+
+class Course {
+	void enroll(long duration) {
+		System.out.println("long");
+	}
+	void enroll(int duration) {
+		System.out.println("int");
+	}
+	void enroll(String s) {
+		System.out.println("String");
+	}
+	void enroll(Object o) {
+		System.out.println("Object");
+	}
+}
+
+what is the output of the following code?
+
+class EJavaGuru {
+	public static void main(String args[]) {
+		Course course = new Course();
+		char c = 10;
+		course.enroll(c);
+		course.enroll("Object");
+	}
+}
+
+	a Compilation error
+	b Runtime exception
+*	c int
+	String
+	d long
+	Object
+
+Q3-9. Examine the following code and select the correct options:
+
+class EJava {
+	public EJava() {
+		this(7);
+		System.out.println("public");
+	}
+	private EJava(int val) {
+		this("Sunday");
+		System.out.println("private");
+	}
+	protected EJava(String val) {
+		System.out.println("protected");
+	}
+}
+
+class TestEJava {
+	public static void main(String[] args) {
+		EJava eJava = new EJava();
+	}
+}
+
+*	a The class EJavadefines three overloaded constructors.
+	b The class EJavadefines two overloaded constructors. The private constructor
+	isn’t counted as an overloaded constructor.
+	c Constructors with different access modifiers can’t call each other.
+*	d The code prints the following:
+	protected
+	private
+	public
+	e The code prints the following:
+	public
+	private
+	protected
+
+Q3-10.Select the incorrect options:
+
+*	a If a user defines a private constructor for a public class, Java creates a public
+	default constructor for the class.
+	b A class that gets a default constructor doesn’t have overloaded constructors.
+*	c A user can overload the default constructor of a class.
+	d The following class is eligible for a default constructor:
+	class EJava {}
+	e The following class is also eligible for a default constructor:
+	class EJava {
+	void EJava() {}
+	}

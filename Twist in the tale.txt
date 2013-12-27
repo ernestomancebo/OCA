@@ -231,3 +231,16 @@ public String model;
 		public double getWeight() { return weight; }
 
 *	e 	None of the above.
+
+Twist in the Tale 4.1
+
+Which answer correctly shows its output?
+
+String letters = "ABCAB";
+System.out.println(letters.substring(0, 2).startsWith('A'));
+
+*	a true
+	b false
+	c AB
+	d ABC
+	e Compilation error
