@@ -585,3 +585,190 @@ Q3-10.Select the incorrect options:
 	class EJava {
 	void EJava() {}
 	}
+
+/*
+##################################################
+Topic 4
+##################################################
+*/
+
+Q4-1.What is the output of the following code?
+
+class EJavaGuruArray {
+public static void main(String args[]) {
+int[] arr = new int[5];
+byte b = 4; char c = 'c'; long longVar = 10;
+arr[0] = b;
+arr[1] = c;
+arr[3] = longVar;
+System.out.println(arr[0] + arr[1] + arr[2] + arr[3]);
+}
+}
+	a 4c010
+	b 4c10
+	c 113
+	d 103
+*	e Compilation error
+
+long doesn't fit.
+
+Q4-2.What is the output of the following code?
+
+class EJavaGuruArray2 {
+public static void main(String args[]) {
+int[] arr1;
+int[] arr2 = new int[3];
+char[] arr3 = {'a', 'b'};
+arr1 = arr2;
+arr1 = arr3;
+System.out.println(arr1[0] + ":" + arr1[1]);
+}
+}
+	a 0:0
+	b a:b
+	c 0:b
+	d a:0
+*	e Compilation error
+
+Must be the same type
+
+Q4-3. Which  of  the  following  are  valid  lines  of  code  to  define  a  multidimensional
+int array?
+
+*	a int[][] array1 = {{1, 2, 3}, {}, {1, 2,3, 4, 5}};
+	b int[][] array2 = new array() {{1, 2, 3}, {}, {1, 2,3, 4, 5}};
+	c int[][] array3 = {1, 2, 3}, {0}, {1, 2,3, 4, 5};
+*	d int[][] array5 = new int[2][];
+
+Q4-4.Which of the following statements are correct?
+
+	a By  default,  an ArrayList creates  an  array  with  an  initial  size  of  16  to  store
+	itselements.
+	b Because ArrayList stores only objects, you can’t pass an element of an ArrayList to a switch construct.
+	c Calling clear() and remove()on an ArrayList will remove all its elements.
+*	d If you frequently add elements to an ArrayList, specifying a larger capacity will
+	improve the code efficiency.
+*	e Calling the method clone() on an ArrayListcreates its shallow copy; that is, it
+	doesn’t clone the individual list elements.
+
+Q4-5.Which of the following statements are correct?
+
+*	a An ArrayList offers a resizable array, which is easily managed using the methods it provides. You can add and remove elements from an ArrayList.
+*	b Values stored by an ArrayList can be modified.
+*	c You can iterate through elements of an ArrayList using a for loop, Iterator, or ListIterator.
+	d An ArrayList requires you to specify the total number of elements before you can store any elements in it.
+*	e An ArrayList can store any type of object.
+
+Q4-6.What is the output of the following code?
+
+import java.util.*; 									// line 1
+class EJavaGuruArrayList { 								// line 2
+public static void main(String args[]) { 				// line 3
+ArrayList<String> ejg = new ArrayList<>(); 				// line 4
+ejg.add("One"); 										// line 5
+ejg.add("Two"); 										// line 6
+System.out.println(ejg.contains(new String("One"))); 	// line 7
+System.out.println(ejg.indexOf("Two")); 				// line 8
+ejg.clear(); 											// line 9
+System.out.println(ejg); 								// line 10
+System.out.println(ejg.get(1));							// line 11
+}														// line 12
+} 														// line 13
+
+	a Line 7 prints true
+*	b Line 7 prints false
+	c Line 8 prints -1
+*	d Line 8 prints 1
+*	e Line 9 removes all elements of the list ejg
+	f Line 9 sets the list ejg to null
+	g Line 10 prints null
+*	h Line 10 prints []
+	i Line 10 prints a value similar to ArrayList@16356
+*	k Line 11 throws an exception
+	l Line 11 prints null
+
+Q4-7.What is the output of the following code?
+
+class EJavaGuruString {
+public static void main(String args[]) {
+String ejg1 = new String("E Java");
+String ejg2 = new String("E Java");
+String ejg3 = "E Java";
+String ejg4 = "E Java";
+do
+System.out.println(ejg1.equals(ejg2));
+while (ejg3 == ejg4);
+}
+}
+	a true printed once
+	b false printed once
+&	c true printed in an infinite loop
+&*	d false printed in an infinite loop
+-Contains the same Char sequence...
+
+Q4-8. What is the output of the following code?
+
+class EJavaGuruString2 {
+public static void main(String args[]) {
+String ejg = "game".replace('a', 'Z').trim().concat("Aa");
+ejg.substring(0, 2);
+System.out.println(ejg);
+}
+}
+
+	a gZmeAZ
+*	b gZmeAa
+	c gZm
+	d gZ
+	e game
+
+Q4-9. What is the output of the following code?
+
+class EJavaGuruString2 {
+public static void main(String args[]) {
+String ejg = "game";
+ejg.replace('a', 'Z').trim().concat("Aa");
+ejg.substring(0, 2);
+System.out.println(ejg);
+}
+}
+
+	a gZmeAZ
+&*	b gZmeAa
+	c gZm
+	d gZ
+&	e game
+
+ejg isn't assigned to any other String 
+
+Q4-10. What is the output of the following code?
+
+class EJavaGuruStringBuilder {
+public static void main(String args[]) {
+StringBuilder ejg = new StringBuilder(10 + 2 + "SUN" + 4 + 5);
+ejg.append(ejg.delete(3, 6));
+System.out.println(ejg);
+}
+}
+
+*	a 12S512S5
+	b 12S12S
+	c 1025102S
+	d Runtime exception
+
+Q4-11.What is the output of the following code?
+
+class EJavaGuruStringBuilder2 {
+public static void main(String args[]) {
+StringBuilder sb1 = new StringBuilder("123456");
+sb1.subSequence(2, 4);
+sb1.deleteCharAt(3);
+sb1.reverse();
+System.out.println(sb1);
+}
+}
+
+	a 521
+	b Runtime exception
+*	c 65321
+	d 65431

@@ -244,3 +244,52 @@ System.out.println(letters.substring(0, 2).startsWith('A'));
 	c AB
 	d ABC
 	e Compilation error
+
+Twist in the Tale 4.2
+
+Which of the following options (there’s just one correct answer) correctly creates
+an object of the class StringBuilderwith a default capacity of 16 characters?
+
+	a StringBuilder name = StringBuilder.getInstance();
+	b StringBuilder name = StringBuilder.createInstance();
+	c StringBuilder name = StringBuilder.buildInstance();
+*	d None of the above
+
+Twist in the Tale 4.3
+
+Modify some of the code used in the previous example as follows:
+
+Line1> String multiStrArr[][] = new String[][]{
+Line2> {"A", "B"},
+Line3> null,
+Line4> {"Jan", "Feb", null},
+Line5> };
+
+Which of the following individual options are true for the previous code?
+
+	a Code on line 4 is the same as {"Jan", "Feb", null, null},
+*	b No value is stored at multiStrArr[2][2]
+*	c No value is stored at multiStrArr[1][1]
+*	d Array multiStrArr is asymmetric. 
+
+
+Twist in the Tale 4.4
+
+What is the output of the following code?
+
+ArrayList<String> myArrList = new ArrayList<String>();
+String one = "One";
+String two = new String("Two");
+myArrList.add(one);
+myArrList.add(two);
+ArrayList<String> yourArrList = myArrList;
+one.replace("O", "B");
+for (String val : myArrList)
+System.out.print(val + ":");
+for (String val : yourArrList)
+System.out.print(val + ":");
+
+*	a One:Two:One:Two:
+	b Bne:Two:Bne:Two:
+	c One:Two:Bne:Two:
+	d Bne:Two:One:Two:
