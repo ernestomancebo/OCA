@@ -1,0 +1,20 @@
+equals() contract!!
+
+Compile-time constant:
+final variables that must be declared and initialized in the same line.
+Switch only accepts Compile-time constant; The values must be: integers, except long, them wrappers, String and enum
+
+Doesn't matter where case labels are placed.. Them acts like doors..
+Case labels can't be duplicated
+
+Switch discarts decimals values defining constants.
+
+Watch out for the annonimous block inside if's
+
+Labeled statements:
+■ You can add labels to a code block defined using braces, {}, all looping statements (for, enhanced forloop, while, do-while), conditional constructs (if
+and switchstatements), expressions and assignments, returnstatements, try
+blocks, and throwsstatements.
+■ You can’t add labels to declarations of variables.
+■ You can use a labeled breakstatement to exit an outer loop. 
+■ You can use a labeled continuestatement to skip the iteration of the outer loop.

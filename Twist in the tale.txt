@@ -293,3 +293,98 @@ System.out.print(val + ":");
 	b Bne:Two:Bne:Two:
 	c One:Two:Bne:Two:
 	d Bne:Two:One:Two:
+
+Twist in the Tale 5.1
+
+What is the output of this code?
+
+String result = "1";
+int score = 10;
+if ((score = score+10) == 100)
+result = "A";
+else if ((score = score+29) == 50)
+result = "B";
+else if ((score = score+200) == 10)
+result = "C";
+else
+result = "F";
+System.out.println(result + ":" + score);
+
+	a A:10
+	b C:10
+	c A:20
+	d B:29
+	e C:249
+*	f F:249
+
+Twist in the Tale 5.2
+
+What is the output of this code?
+
+String day = new String("SUN");
+switch (day) {
+case "MON":
+case "TUE":
+case "WED":
+case "THU": System.out.println("Time to work");
+break;
+case "FRI": System.out.println("Nearing weekend");
+break;
+case "SAT":
+case "SUN": System.out.println("Weekend!");
+break;
+default: System.out.println("Invalid day?");
+}
+
+	a Time to work
+	b Nearing weekend
+*	c Weekend!
+	d Invalid day?
+
+Twist in the Tale 5.3
+
+examines the value of the long variable dayCount and prints out the name
+of any one month that matches the day count?
+
+a Submission by Harry:
+
+long dayCount = 31;
+if (dayCount == 28 || dayCount == 29)
+System.out.println("Feb"); 
+else if (dayCount == 30)
+System.out.println("Apr");
+else if (dayCount == 31)
+System.out.println("Jan");
+
+Prints "Jan"
+
+b Submission by Selvan:
+
+long dayCount = 31;
+switch (dayCount) {
+case 28:
+case 29: System.out.println("Feb"); break;
+case 30: System.out.println("Apr"); break;
+case 31: System.out.println("Jan"); break;
+} 
+
+switch doesn't allow longs..
+
+Twist in the Tale 5.4
+
+What is the output of this code?
+
+String[] programmers = {"Outer", "Inner"};
+for (String outer : programmers) {
+for (String inner : programmers) {
+if (inner.equals("Inner"))
+break;
+System.out.print(inner + ":");
+}
+}
+
+*	a Outer:Outer:
+	b Outer:Inner:Outer:Inner:
+	c Outer:
+	d Outer:Inner:
+	e Inner:Inner:
