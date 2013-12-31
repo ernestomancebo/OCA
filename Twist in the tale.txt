@@ -388,3 +388,36 @@ System.out.print(inner + ":");
 	c Outer:
 	d Outer:Inner:
 	e Inner:Inner:
+
+Twist in the Tale 6.1
+
+Which of the options is correct for this modified code?
+
+class Employee {
+private String name;
+String address;
+protected String phoneNumber;
+public float experience;
+}
+class Programmer extends Employee {
+Programmer (String val) {
+name = val;
+}
+String getName() {
+return name;
+}
+}
+class Office {
+public static void main(String args[]) {
+new Programmer ("Harry").getName();
+}
+}
+
+	a The class Office prints Harry.
+*	b The  derived  class Programmer can’t  define  a  getter  method  for  a  variable
+	defined in its base class Employee.
+	c The  derived  class Programmer can’t  access  variables  of  its  base  class  in  its
+	constructors.
+	d new Programmer ("Harry").getName(); isn’t the right way to create an object
+	of class Programmer.
+*	e Compilation error.
