@@ -421,3 +421,85 @@ new Programmer ("Harry").getName();
 	d new Programmer ("Harry").getName(); isn’t the right way to create an object
 	of class Programmer.
 *	e Compilation error.
+
+Twist in the Tale 6.2
+
+select the correct options for the class TwistInTale2:
+
+class Employee {}
+interface Interviewer {}
+class Manager extends Employee implements Interviewer {}
+class HRExecutive extends Employee implements Interviewer {}
+class TwistInTale2 {
+public static void main (String args[]) {
+Interviewer[] interviewer = new Interviewer[] {
+new Manager(), // Line 1
+new Employee(), // Line 2
+new HRExecutive(), // Line 3
+new Interviewer() // Line 4
+};
+}
+}
+
+*	a An  object  of  the  class Manager can  be  added  to  an  array  of  the  interface
+	Interviewer. Code on line 1 will compile successfully.
+	b An  object  of  the  class Employee can  be  added  to  an  array  of  the  interface
+	Interviewer. Code on line 2 will compile successfully.
+*	c An object of the class HRExecutivecan be added to an array of the interface
+	Interviewer. Code on line 3 will compile successfully.
+	d An object of the interface Interviewercan be added to an array of the interface Interviewer. Code on line 4 will compile successfully.
+
+Twist in the Tale 6.3
+
+What is the output of class TwistInTale3?
+
+class Employee {
+String name = "Emp";
+String address = "EmpAddress";
+}
+class Programmer extends Employee{
+String name = "Prog";
+void printValues() {
+System.out.print(this.name + ":");
+System.out.print(this.address + ":");
+System.out.print(super.name + ":");
+System.out.print(super.address);
+}
+}
+class TwistInTale3 {
+public static void main(String args[]) {
+new Programmer().printValues();
+}
+}
+
+	a Prog:null:Emp:EmpAddress
+	b Prog:EmpAddress:Emp:EmpAddress
+	c Prog::Emp:EmpAddress
+*	d Compilation error
+
+Twist in the Tale 6.4
+
+which  of  the options when inserted at //INSERT CODE HERE//will define the method runas a polymorphic method?
+
+class Employee {
+//INSERT CODE HERE// { 
+System.out.println("Emp-run");
+return null;
+}
+}
+class Programmer extends Employee{
+String run() {
+System.out.println("Programmer-run");
+return null;
+}
+}
+class TwistInTale4 {
+public static void main(String args[]) {
+new Programmer().run();
+}
+}
+
+*	a String run()
+	b void run(int meters)
+	c void run()
+	d int run(String race)

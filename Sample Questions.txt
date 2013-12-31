@@ -983,3 +983,231 @@ System.out.println(i);
 		1
 		5
 *	f 	5
+
+/*
+##################################################
+Topic 6
+##################################################
+*/
+
+Q6-1.What is the output of the following code?
+
+class Animal {
+void jump() { System.out.println("Animal"); }
+}
+class Cat extends Animal {
+void jump(int a) { System.out.println("Cat"); }
+}
+class Rabbit extends Animal {
+void jump() { System.out.println("Rabbit"); }
+}
+class Circus {
+public static void main(String args[]) {
+Animal cat = new Cat();
+Rabbit rabbit = new Rabbit();
+cat.jump();
+rabbit.jump();
+}
+}
+
+*	a Animal
+	Rabbit
+	b Cat
+	Rabbit
+	c Animal
+	Animal
+	d None of the above
+
+Q6-2.Given the following code, select the correct statements:
+
+class Flower {
+public void fragrance() {System.out.println("Flower"); }
+}
+class Rose {
+public void fragrance() {System.out.println("Rose"); }
+}
+class Lily {
+public void fragrance() {System.out.println("Lily"); }
+}
+class Bouquet {
+public void arrangeFlowers() {
+Flower f1 = new Rose();
+Flower f2 = new Lily();
+f1.fragrance();
+}
+}
+
+	a The output of the code is:
+	Flower
+	b The output of the code is:
+	Rose
+	c The output of the code is:
+	Lily
+*	d The code fails to compile.
+
+Q6-3.Examine the following code and select the correct method declaration to be
+inserted at //INSERT CODE HERE:
+
+interface Movable {
+void move();
+}
+class Person implements Movable {
+public void move() { System.out.println("Person move"); }
+}
+class Vehicle implements Movable {
+public void move() { System.out.println("Vehicle move"); }
+}
+class Test {
+// INSERT CODE HERE
+movable.move();
+}
+}
+
+*	a void walk(Movable movable) {
+-	b void walk(Person movable) {
+-	c void walk(Vehicle movable) {
+	d void walk() {
+
+Doesn't matter if isn't polymorphic..
+
+Q6-4.Select the correct statements:
+
+	a Only an abstract class can be used as a base class to implement polymorphism
+	with classes.
+*	b Polymorphic methods are also called overridden methods.
+	c In polymorphism, depending on the exact type of object, the JVMexecutes the
+	appropriate method at compile time.
+	d None of the above.
+
+Q6-5.Given the following code, select the correct statements:
+
+class Person {}
+class Employee extends Person {}
+class Doctor extends Person {}
+
+-*	a The code exhibits polymorphism with classes.
+	b The code exhibits polymorphism with interfaces.
+	c The code exhibits polymorphism with classes and interfaces.
+&	d None of the above.
+
+Polymorphism where??
+
+Q6-6. Which of the following statements are true?
+
+*	a Inheritance enables you to reuse existing code.
+*	b Inheritance saves you from having to modify common code in multiple classes.
+	c Polymorphism passes special instructions to the compiler so that the code can
+	run on multiple platforms.
+	d Polymorphic methods cannot throw exceptions.
+
+Q6-7. Given the following code, which of the options are true?
+
+class Satellite {
+void orbit() {}
+}
+class Moon extends Satellite {
+void orbit() {}
+}
+class ArtificialSatellite extends Satellite {
+void orbit() {}
+}
+
+*	a The method orbit defined in the classes Satellite, Moon, and ArtificialSatellite is polymorphic.
+	b Only  the  method orbit defined  in  the  classes Satellite and  ArtificialSatellite is polymorphic.
+	c Only the method orbit defined in the class ArtificialSatellite is polymorphic.
+	d None of the above.
+
+Q6-8. Examine the following code:
+
+class Programmer {
+void print() {
+System.out.println("Programmer - Mala Gupta");
+}
+}
+class Author extends Programmer {
+void print() {
+System.out.println("Author - Mala Gupta");
+}
+}
+class TestEJava {
+Programmer a = new Programmer();
+// INSERT CODE HERE
+a.print();
+b.print();
+}
+
+Which of the following lines of code can be individually inserted at 
+//INSERT  CODE HERE so that the output of the code is as follows:
+
+Programmer - Mala Gupta
+Author - Mala Gupta
+
+	a Programmer b = new Programmer();
+*	b Programmer b = new Author();
+*	c Author b = new Author();
+	d Author b = new Programmer();
+	e Programmer b = ((Author)new Programmer());
+	f Author b = ((Author)new Programmer());
+
+Q6-9. Given the following code, which of the options, when applied individually, will
+make it compile successfully?
+
+Line1> interface Employee {}
+Line2> interface Printable extends Employee {
+Line3> String print();
+Line4> }
+Line5> class Programmer {
+Line6> String print() { return("Programmer - Mala Gupta"); }
+Line7> }
+Line8> class Author extends Programmer implements Printable, Employee {
+Line9> String print() { return("Author - Mala Gupta"); }
+Line10> }
+
+-*	a Modify code on line 2 to: interface Printable{
+	b Modify code on line 3 to: public String print();
+*	c Define the accessibility of the print methods to public on lines 6 and 9.
+-*	d Modify code on line 8 so that it implements only the interface Printable.
+
+Bad luck Bryan..
+
+Q6-10.What is the output of the following code?
+
+class Base {
+String var = "EJava";
+void printVar() {
+System.out.println(var);
+}
+}
+class Derived extends Base {
+String var = "Guru";
+void printVar() {
+System.out.println(var);
+}
+}
+class QReference {
+public static void main(String[] args) {
+Base base = new Base();
+Base derived = new Derived();
+System.out.println(base.var);
+System.out.println(derived.var);
+base.printVar();
+derived.printVar();
+}
+}
+
+	a 	EJava
+		EJava
+		EJava
+		Guru
+*	b 	EJava
+		Guru
+		EJava
+		Guru
+	c 	EJava
+		EJava
+		EJava
+		EJava
+	d 	EJava
+		Guru
+		Guru
+		Guru
