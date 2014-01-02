@@ -18,3 +18,14 @@ blocks, and throwsstatements.
 ■ You can’t add labels to declarations of variables.
 ■ You can use a labeled breakstatement to exit an outer loop. 
 ■ You can use a labeled continuestatement to skip the iteration of the outer loop.
+
+NOTE When you try to access an invalid array position, ArrayIndexOutOfBoundsException is thrown. When you try to access an invalid ArrayList position, IndexOutOfBoundsExceptionis thrown.
+
+Exception hierarchy!!!! ****
+
+ExceptionInInitializerError can  be  caused  by  an  object  of
+RuntimeExceptiononly. It can’t occur as the result of an error or checked
+exception thrown by the staticinitialization block.
+
+Don’t  confuse  the  exception  thrown  by Class.forName(),  used  to
+load  the  class,  and NoClassDefFoundErrorthrown by the JVM. Class.forName()throws ClassNotFoundException.

@@ -1211,3 +1211,234 @@ derived.printVar();
 		Guru
 		Guru
 		Guru
+
+/*
+##################################################
+Topic 7
+##################################################
+*/
+
+Q7-1.What is the output of the following code:
+
+class Course {
+String courseName;
+Course() {
+Course c = new Course();
+c.courseName = "Oracle";
+}
+}
+class EJavaGuruPrivate2 {
+public static void main(String args[]) {
+Course c = new Course();
+c.courseName = "Java";
+System.out.println(c.courseName);
+}
+}
+
+	a The code will print Java.
+	b The code will print Oracle.
+	c The code will not compile.
+*	d The code will throw an exception or an error at runtime.
+
+Q7-2.Select the correct option(s):
+
+	a You cannot handle runtime exceptions.
+*	b You should not handle errors.
+*	c If a method throws a checked exception, it must be either handled by the
+	method or specified in its throws clause. 
+&	d If  a  method  throws  a  runtime  exception,  it  may  include  the  exception  in  its
+	throws clause.
+	e Runtime exceptions are checked exceptions.
+
+D- Optional, but not necessary
+
+Q7-3.Examine the following code and select the correct option(s):
+
+class EJavaGuruExcep2 {
+public static void main(String args[]) {
+EJavaGuruExcep2 var = new EJavaGuruExcep2();
+var.printArrValues(args);
+}
+void printArrValues(String[] arr) {
+try {
+System.out.println(arr[0] + ":" + arr[1]);
+}
+catch (NullPointerException e) {
+System.out.println("NullPointerException");
+}
+catch (IndexOutOfBoundsException e) {
+System.out.println("IndexOutOfBoundsException");
+}
+catch (ArrayIndexOutOfBoundsException e) {
+System.out.println("ArrayIndexOutOfBoundsException");
+}
+}
+}
+
+	a If  the  class EJavaGuruExcep2 is  executed  using  the  following  command,  it
+	prints NullPointerException:
+	javaEJavaGuruExcep2
+	b If  the  class EJavaGuruExcep2 is  executed  using  the  following  command,  it
+	prints IndexOutOfBoundsException:
+	javaEJavaGuruExcep2
+	c If  the  class EJavaGuruExcep2 is  executed  using  the  following  command,  it
+	prints ArrayIndexOutOfBoundsException:
+	javaEJavaGuruExcep2one
+*	d The code will fail to compile.
+
+Q7-4.What is the output of the following code?
+
+class EJava {
+void method() {
+try {
+guru();
+return;
+}
+finally {
+System.out.println("finally 1");
+}
+}
+void guru() {
+System.out.println("guru");
+throw new StackOverflowError();
+}
+public static void main(String args[]) {
+EJava var = new EJava();
+var.method();
+}
+}
+
+	a 	guru
+		finally 1
+&	b 	guru
+		finally 1
+		Exception in thread "main" java.lang.StackOverflowError
+	c 	guru
+		Exception in thread "main" java.lang.StackOverflowError
+	d 	guru
+-*	e 	The code fails to compile.
+
+The method guruthrows StackOverflowError, which is not a checked exception.
+Even  though  your  code  should  not  throw  an  error,  it  is  possible  syntactically.  Your
+code will compile successfully.
+
+Q7-5.Select the incorrect statement(s):
+
+	a Exceptions enable a developer to define the programming logic separate from
+	the exception-handling code.
+*	b Exception handling speeds up execution of the code.
+	c Exception handing is used to define code that should execute when a piece of
+	code throws an exception.
+	d Code  that  handles  all  the  checked  exceptions  can  still  throw  unchecked
+	exceptions.
+
+Q7-6.Select the incorrect statement(s):
+
+	a java.lang.Throwable is the base class of all types of exceptions.
+	b If a class is a subclass of java.lang.Exception, it may or may not be a checked
+	exception.
+*	c Error is an unchecked exception.
+*	d Error and checked exceptions need not be part of a method signature.
+
+Q7-7.What is the output of the following code?
+
+class TryFinally {
+int tryAgain() {
+int a = 10;
+try {
+++a;
+}
+finally {
+a++;
+}
+return a;
+}
+public static void main(String args[]) {
+System.out.println(new TryFinally().tryAgain());
+}
+}
+
+	a 10
+	b 11
+*	c 12
+	d Compilation error
+	e Runtime exception
+
+Q7-8.What is the output of the following code?
+
+class EJavaBase {
+void myMethod() throws ExceptionInInitializerError {
+System.out.println("Base");
+}
+}
+class EJavaDerived extends EJavaBase {
+void myMethod() throws RuntimeException {
+System.out.println("Derived");
+}
+}
+class EJava3 {
+public static void main(String args[]) {
+EJavaBase obj = new EJavaDerived();
+obj.myMethod();
+}
+}
+
+	a Base
+&	b Derived
+	c Derived
+	Base
+	d Base
+	Derived
+-*	e Compilation error
+
+Explanation: The rule that if a base class method doesn’t throw an exception, an overriding method in the derived class can’t throw a exception applies only to checked
+exceptions. It doesn’t apply to runtime (unchecked) exceptions or errors. A base or
+overridden method is free to throw any Erroror runtime exception
+
+
+Q7-9.Which of the following statements are true?
+
+	a A  user-defined  class  may  not  throw  an IllegalStateException.  It  must  be
+	thrown only by Java API classes.
+-*	b System.out.println will  throw  NullPointerException if  an  uninitialized
+	instance variable of type String is passed to it to print its value.
+*	c NumberFormatException is thrown by multiple methods from the Java API when
+	invalid numbers are passed on as Strings to be converted to the specified number format.
+&	d ExceptionInInitializerError may be thrown by the JVM when a static initializer in your code throws a NullPointerException.
+
+Q7-10.What is the output of the following code?
+
+class EJava4 {
+void foo() {
+try {
+String s = null;
+System.out.println("1");
+try {
+System.out.println(s.length());
+}
+catch (NullPointerException e) {
+System.out.println("inner");
+}
+System.out.println("2");
+}
+catch (NullPointerException e) {
+System.out.println("outer");
+}
+}
+public static void main(String args[]) {
+EJava4 obj = new EJava4();
+obj.foo();
+}
+}
+
+	a 	1
+		inner
+		2
+		outer
+	b 	1
+		outer
+	c 	1
+		inner
+*	d 	1
+		inner
+		2

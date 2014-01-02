@@ -503,3 +503,158 @@ new Programmer().run();
 	b void run(int meters)
 	c void run()
 	d int run(String race)
+
+Twist in the Tale 7.1
+
+Given that file.txt doesn’t exist on your system, what is the output of the following code?
+
+import java.io.*;
+public class MultipleExceptions {
+public static void main(String args[]) {
+FileInputStream fis = null;
+try {
+fis = new FileInputStream("file.txt");
+System.out.println("File Opened");
+fis.read();
+System.out.println("Read File");
+}
+finally {
+System.out.println("finally");
+}
+catch (FileNotFoundException fnfe) {
+System.out.println("File not found");
+}
+catch (IOException ioe) {
+System.out.println("File Closing Exception");
+}
+System.out.println("Next task..");
+}
+}
+
+	a 	The code prints
+		File not found
+		finally
+		Next task..
+	b 	The code prints 
+		File Opened
+		File Closing Exception
+		finally
+		Next task..
+	c 	The code prints File not found
+*	d 	The code fails to compile
+
+Twist in the Tale 7.2
+
+Given that players.txt exists on your system and that the assignment of players, shown
+in bold, doesn’t throw any exceptions, what is the output of the following code?
+
+import java.io.*;
+public class TwistInTaleNestedTryCatch {
+static FileInputStream players, coach;
+public static void main(String args[]) {
+try {
+players = new FileInputStream("players.txt");
+System.out.println("players.txt found");
+try {
+coach.close();
+}
+catch (IOException e) {
+System.out.println("coach.txt not found");
+}
+}
+catch (FileNotFoundException fnfe) {
+System.out.println("players.txt not found");
+}
+catch (NullPointerException ne) {
+System.out.println("NullPointerException");
+}
+}
+}
+
+*	a 	The code prints
+		players.txt found
+		NullPointerException
+	b 	The code prints
+		players.txt found
+		coach.txt not found
+*	c 	The code throws a runtime exception.
+	d 	The code fails to compile
+
+Twist in the Tale 7.3
+
+Will the code in the error-handling block execute? What do you think is the output of
+the following code?
+
+public class TwistInTaleCatchError {
+public static void main(String args[]) {
+try {
+myMethod();
+}
+catch (StackOverflowError s) {
+for (int i=0; i<2; ++i)
+System.out.println(i);
+}
+}
+public static void myMethod() {
+myMethod();
+}
+}
+
+	a 	0
+		java.lang.StackOverFlowError
+*	b 	0
+		1
+	c 	0
+		1
+		2
+		java.lang.StackOverFlowError
+
+Twist in the Tale 7.4
+
+Following is the modified code. Examine the code and select the correct options:
+
+class Ink{}
+interface Printable {}
+class ColorInk extends Ink implements Printable {}
+class BlackInk extends Ink{}
+class TwistInTaleCasting {
+public static void main(String args[]) {
+Printable printable = null;
+BlackInk blackInk = new BlackInk();
+printable = (Printable)blackInk;
+}
+}
+
+*	a printable = (Printable)blackInkwill throw compilation error.
+	b printable = (Printable)blackInkwill throw runtime exception.
+	c printable = (Printable)blackInkwill throw checked exception.
+	d The following line of code will fail to compile:
+	printable = blackInk
+
+Twist in the Tale 7.5
+
+Examine the code and select the correct answers.
+
+class TwistInTaleNullPointerException {
+public static void main(String[] args) {
+String[][] oldLaptops =
+{
+
+{"Dell", "Toshiba", "Vaio"}, 
+null,
+{"IBM"}, 
+new String[10] 
+};
+
+System.out.println(oldLaptops[0][0]); 			// line 1
+System.out.println(oldLaptops[1]); 				// line 2
+System.out.println(oldLaptops[3][6]); 			// line 3
+System.out.println(oldLaptops[3][0].length()); 	// line 4
+System.out.println(oldLaptops); 				// line 5
+}
+}
+
+	a Code on line 1 will throw NullPointerException
+	b Code on lines 1 and 3 will throw NullPointerException
+*	c Only code on line 4 will throw NullPointerException
+	d Code on lines 3 and 5 will throw NullPointerException
