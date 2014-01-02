@@ -322,9 +322,9 @@ System.out.println(salesPhone++ + ++salesPhone + ++salesPhone);
 }
 
 	a 5
-*	b 6
+	b 6
 	c 8
-	d 9
+*	d 9
 
 ME-Q20. Which of the following options defines the correct structure of a Java class?
 (Select 1 option.)
@@ -400,10 +400,10 @@ line8> e = null;
 line9> }
 line10> }
 
-*	a The object referred to by object e is eligible for garbage collection on line 8.
+	a The object referred to by object e is eligible for garbage collection on line 8.
 	b The object referred to by object e is eligible for garbage collection on line 9.
 	c The object referred to by object e isn’t eligible for garbage collection because its member variable mgr isn’t set to null.
-	d The code throws a runtime exception and the code execution never reaches line 8 or 9.
+*	d The code throws a runtime exception and the code execution never reaches line 8 or 9.
 
 ME-Q24. Which of the following is the correct declaration of a method that accepts
 two String arguments and an int argument and doesn’t return any value? (Select 2 options.)
