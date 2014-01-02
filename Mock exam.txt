@@ -1,0 +1,1541 @@
+ME-Q1. Given the following definition of the classes Animal, Lion, and Jumpable,
+select the correct combinations of assignments of a variable (select 2 options):
+
+interface Jumpable {}
+class Animal {}
+class Lion extends Animal implements Jumpable {}
+
+	a Jumpable var1 = new Jumpable();
+*	b Animal var2 = new Animal();
+	c Lion var3 = new Animal();
+	d Jumpable var4 = new Animal();
+*	e Jumpable var5 = new Lion();
+
+ME-Q2.Which of the following statements are true? (Select 3 options.)
+
+*	a A Java class can define multiple methods.
+*	b A Java class can define multiple variables.
+	c A Java class can be defined in multiple packages.
+*	d A Java class can import multiple packages.
+	e A Java class can’t define more than 108 constructors.
+	f End-of-line comments can’t follow import or package statements.
+	g Multiline comments can only be defined within a method definition.
+
+ME-Q3. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will make the code print 1? (Select 1 option.)
+
+try {
+String[][] names = {{"Andre", "Mike"}, null, {"Pedro"}};
+System.out.println(names[2][1].substring(0, 2));
+}
+catch (/* INSERT CODE HERE */) {
+System.out.println(1);
+}
+
+	a IndexPositionException e
+	b NullPointerException e
+*	c ArrayIndexOutOfBoundsException e
+	d ArrayOutOfBoundsException e
+
+ME-Q4.What is the output of the following code? (Select 1 option.)
+
+int a = 10; String name = null;
+try {
+a = name.length();
+a++;
+}
+catch (RuntimeException e){
+++a;
+}
+System.out.println(a);
+
+	a 5
+	b 6
+	c 10
+	d 11
+	e 12
+*	f Runtime exception
+
+ME-Q5. Given the following class definition,
+
+class Student { int marks = 10; }
+
+what is the output of the following code? (Select 1 option.)
+
+class Result {
+public static void main(String... args) {
+Student s = new Student();
+switch (s.marks) {
+default: System.out.println("100");
+case 10: System.out.println("10");
+case 98: System.out.println("98");
+}
+}
+}
+
+	a 100
+	10
+	98
+	b 10
+	98
+	c 100
+*	d 10
+
+ME-Q6. Given the following code, which code can be used to create and initialize an
+object of class ColorPencil? (Select 2 options.)
+
+class Pencil {}
+class ColorPencil extends Pencil {
+String color;
+ColorPencil(String color) {this.color = color;}
+}
+
+	a ColorPencil var1 = new ColorPencil();
+	b ColorPencil var2 = new ColorPencil(RED);
+*	c ColorPencil var3 = new ColorPencil("RED");
+*	d Pencil var4 = new ColorPencil("BLUE");
+
+ME-Q7.What is the output of the following code? (Select 1 option.)
+
+class Doctor {
+protected int age;
+protected void setAge(int val) { age = val; }
+protected int getAge() { return age; }
+}
+class Surgeon extends Doctor {
+Surgeon(String val) {
+specialization = val;
+}
+String specialization;
+String getSpecialization() { return specialization; }
+}
+
+class Hospital {
+public static void main(String args[]) {
+Surgeon s1 = new Surgeon("Liver");
+Surgeon s2 = new Surgeon("Heart");
+s1.age = 45;
+System.out.println(s1.age + s2.getSpecialization());
+System.out.println(s2.age + s1.getSpecialization());
+}
+}
+
+*	a 	45Heart
+		0Liver
+	b 	45Liver
+		0Heart
+	c 	45Liver
+		45Heart
+	d 	45Heart
+		45Heart
+	e 	Class fails to compile.
+
+ME-Q8.What is the output of the following code? (Select 1 option.)
+
+class RocketScience {
+public static void main(String args[]) {
+int a = 0;
+while (a == a++) {
+a++;
+System.out.println(a);
+}
+}
+}
+
+	a The while loop won’t execute; nothing will be printed.
+	b The while loop  will  execute  indefinitely,  printing  all  numbers,  starting
+	from 1.
+	c The while loop will execute indefinitely, printing all even numbers, starting
+	from 0.
+*	d The while loop will execute indefinitely, printing all even numbers, starting
+	from 2.
+	e The while loop will execute indefinitely, printing all odd numbers, starting
+	from 1.
+	f The while loop will execute indefinitely, printing all odd numbers, starting
+	from 3.
+
+ME-Q9. Given the following statements,
+
+■ com.ejava is a package
+■ class Person is defined in package com.ejava
+■ class Course is defined in package com.ejava
+
+which of the following options correctly imports the classes Person and Course in the
+class MyEJava? (Select 3 options.)
+
+*	a 	import com.ejava.*;
+		class MyEJava {}
+	b 	import com.ejava;
+		class MyEJava {}
+*	c 	import com.ejava.Person;
+		import com.ejava.Course;
+		class MyEJava {}
+*	d 	import com.ejava.Person;
+		import com.ejava.*;
+		class MyEJava {}
+
+ME-Q10. Given that the following classes Animal and Forest are defined in the same
+package, examine the code and select the correct statements (select 2 options):
+
+line1> class Animal {
+line2> public void printKing() {
+line3> System.out.println("Lion");
+line4> }
+line5> }
+line6> class Forest {
+line7> public static void main(String... args) {
+line8> Animal anAnimal = new Animal();
+line9> anAnimal.printKing();
+line10> }
+line11> }
+
+*	a The class Forest prints Lion.
+	b If the code on line 2 is changed as follows, the class Forest will print Lion:
+	private void printKing() {
+*	c If the code on line 2 is changed as follows, the class Forest will print Lion:
+	void printKing() {
+	d If the code on line 2 is changed as follows, the class Forest will print Lion:
+	default void printKing() {
+
+ME-Q11. Which of the following statements are true? (Select 2 options.)
+
+*	a Given that you changed the access of a public method B, in class A, to a private method, class C that uses method B will fail to compile.
+*	b Given that you changed the access of a private method B, in class A, to a public method, none of the classes that use class A will fail to compile.
+	c Given that you changed the access of a protected method B, in class A, to a method with default access, class C from the same package as class A won’t be able to access method B. 
+	d A change in the accessibility of the methods in your class never affects any other class that uses your class.
+
+ME-Q12. Which of the following statements are correct? (Select 3 options.)
+
+	a You may not be able to handle all the checked exceptions in your code.
+*	b If required, you can handle all the runtime exceptions in your code.
+*	c You can handle an exception in your code even if you don’t know its exact name.
+*	d A single exception handler can be used to handle all types of runtime and checked exceptions.
+	e You must handle all errors that can be thrown by your code.
+	f Runtime exceptions are also known as checked exceptions.
+
+ME-Q13. Given the following code,
+
+class MainMethod {
+public static void main(String... args) {
+System.out.println(args[0]+":"+ args[2]);
+}
+}
+
+what’s its output if it’s executed using the following command? (Select 1 option.)
+
+java MainMethod 1+2 2*3 4-3 5+1
+
+	a java:1+2
+	b java:3
+	c MainMethod:2*3
+	d MainMethod:6
+	e 1+2:2*3
+	f 3:3
+	g 6
+*	h 1+2:4-3
+	i 31
+	j 4
+
+ME-Q14. What is the output of the following code? (Select 1 option.)
+
+class Person {
+int age;
+float height;
+boolean result;
+String name;
+}
+public class EJava {
+public static void main(String arguments[]) {
+Person person = new Person();
+System.out.println(person.name + person.height + person.result + person.age);
+}
+}
+
+*	a null0.0false0
+	b null0false0
+	c null0.0ffalse0
+	d 0.0false0
+	e 0false0
+	f 0.0ffalse0
+	g null0.0true0
+	h 0true0
+	i 0.0ftrue0
+
+ME-Q15. Given the following code, which option, if used to replace /* INSERT CODE HERE
+*/, will make the code print the value of the variable pagesPerMin? (Select 1 option.)
+
+class Printer {
+int inkLevel;
+}
+class LaserPrinter extends Printer {
+int pagesPerMin;
+public static void main(String args[]) {
+Printer myPrinter = new LaserPrinter();
+System.out.println(/* INSERT CODE HERE */);
+}
+}
+
+	a (LaserPrinter)myPrinter.pagesPerMin
+	b myPrinter.pagesPerMin
+	c LaserPrinter.myPrinter.pagesPerMin
+*	d ((LaserPrinter)myPrinter).pagesPerMin
+
+ME-Q16. Which statements describe the use of exception handling in Java? (Select 2 options.)
+
+*	a Exception handling can prevent an application from crashing or producing incorrect outputs or incorrect input values.
+	b Exception handlers can’t define an alternative flow of action in the event of an exception.
+*	c Exception handlers enable a programmer to define separate code blocks for handling different types of exceptions.
+	d Exception handlers help to define well-encapsulated classes.
+	e Exception handlers help with efficient inheritance.
+
+ME-Q17. Which statements are true for reference and primitive variables? (Select 3 options.)
+
+	a The names of the reference variables are limited to a length of 256 characters.
+*	b There is no limit on the length of the names of primitive variables.
+*	c Multiple reference variables may refer to exactly the same object in memory.
+	d Values stored by primitive and reference variables can be compared for equality by using the equals operator (==) or by using the method equals.
+*	e A primitive variable can’t refer to an object and vice versa.
+
+ME-Q18. What is the output of the following code? (Select 1 option.)
+
+public class Handset {
+public static void main(String... args) {
+double price;
+String model;
+System.out.println(model + price);
+}
+}
+
+	a null0
+	b null0.0
+	c 0
+	d 0.0
+*	e Compilation error
+
+ME-Q19. What is the output of the following code? (Select 1 option.)
+
+public class Sales {
+public static void main(String args[]) {
+int salesPhone = 1;
+System.out.println(salesPhone++ + ++salesPhone + ++salesPhone);
+}
+}
+
+	a 5
+*	b 6
+	c 8
+	d 9
+
+ME-Q20. Which of the following options defines the correct structure of a Java class?
+(Select 1 option.)
+
+	a 	package com.ejava.guru;
+		package com.ejava.oracle;
+		class MyClass { }
+*	b 	import com.ejava.guru.*;
+		import com.ejava.oracle.*;
+		package com.ejava;
+		class MyClass { }
+	c 	class MyClass {
+		import com.ejava.guru.*;
+		}
+	d 	class MyClass {
+		int abc;
+		}
+
+ME-Q21. What is the output of the following code? (Select 1 option.)
+
+class OpPre {
+public static void main(String... args) {
+int x = 10;
+int y = 20;
+int z = 30;
+if (x+y%z > (x+(-y)*(-z))) {
+System.out.println(x + y + z);
+}
+}
+}
+
+	a 60
+	b 59
+	c 61
+*	d No output.
+	e The code fails to compile.
+
+ME-Q22. Select  the  most  appropriate  definition  of  the  variable name and  the  line
+number on which it should be declared so that the following code compiles successfully (choose 1 option):
+
+class EJava {
+// LINE 1
+public EJava() {
+System.out.println(name);
+}
+void calc() {
+// LINE 2
+if (8 > 2) {
+System.out.println(name);
+}
+}
+public static void main(String... args) {
+// LINE 3
+System.out.println(name);
+}
+}
+
+*	a Define static String name; on line 1.
+	b Define String name; on line 1.
+	c Define String name; on line 2.
+	d Define String name; on line 3.
+
+ME-Q23. Examine  the  following  code  and  select  the  correct  statement  (choose 1 option):
+
+line1> class Emp {
+line2> Emp mgr = new Emp();
+line3> }
+line4> class Office {
+line5> public static void main(String args[]) {
+line6> Emp e = null;
+line7> e = new Emp();
+line8> e = null;
+line9> }
+line10> }
+
+*	a The object referred to by object e is eligible for garbage collection on line 8.
+	b The object referred to by object e is eligible for garbage collection on line 9.
+	c The object referred to by object e isn’t eligible for garbage collection because its member variable mgr isn’t set to null.
+	d The code throws a runtime exception and the code execution never reaches line 8 or 9.
+
+ME-Q24. Which of the following is the correct declaration of a method that accepts
+two String arguments and an int argument and doesn’t return any value? (Select 2 options.)
+
+*	a void myMethod(String str1, int str2, String str3)
+	b myMethod(String val1, int val2, String val3)
+	c void myMethod(String str1, str2, int a)
+	d void myMethod(String val1, val2, int val3)
+*	e void myMethod(int str2, String str3, String str1)
+
+ME-Q25. Which of the following will compile successfully? (Select 3 options.)
+
+*	a int eArr1[] = {10, 23, 10, 2};
+*	b int[] eArr2 = new int[10];
+	c int[] eArr3 = new int[] {};
+	d int[] eArr4 = new int[10] {};
+*	e int eArr5[] = new int[2] {10, 20};
+
+ME-Q26. Assume that Oracle has asked you to create a method that returns the concatenated value of two String objects. Which of the following methods do you think
+can accomplish this job? (Select 2 options.)
+
+*	a 	public String add(String 1, String 2) {
+		return str1 + str2;
+		}
+*	b 	private String add(String s1, String s2) {
+		return s1.concat(s2);
+		}
+	c 	protected String add(String value1, String value2) {
+		return value2.append(value2);
+		}
+	d 	String subtract(String first, String second) {
+		return first.concat(second.substring(0));
+		}
+
+ME-Q27. In Java, the class String is defined in the package java.lang, and this package is automatically imported in all the Java classes. Given this statement, which of the
+following options represents the correct definition of class EJava, which can define a variable of class String? (Choose 2 options.)
+
+	a 	import java.lang;
+		class EJava {
+		String guru;
+		}
+	b 	import java.lang.String.*;
+		class EJava {
+		String guru;
+		}
+*	c 	class EJava {
+		String guru;
+		}
+*	d 	import java.lang.String;
+		import java.lang.String;
+		class EJava {
+		String guru;
+		}
+
+ME-Q28. Given the following definitions of the class ChemistryBook, select the statements that are correct individually (choose 2 options):
+
+import java.util.ArrayList;
+class ChemistryBook extends Book {
+public void read() {} 					//METHOD1
+public String read() { return null; }	//METHOD2
+ArrayList read(int a) { return null; } 	//METHOD3
+}
+
+	a Methods  marked  with //METHOD1 and  //METHOD2 are  correctly  overloaded methods.
+*	b Methods  marked  with //METHOD2 and  //METHOD3 are  correctly  overloaded methods.
+*	c Methods  marked  with //METHOD1 and  //METHOD3 are  correctly  overloaded methods.
+	d All the methods—methods marked with //METHOD1, //METHOD2, and //METHOD3 are correctly overloaded methods.
+
+ME-Q29 Given  the  following  definition  of  the  class Home,  select  the  correct  statements (choose 4 options):
+
+class Home {
+String name;
+int rooms;
+Home() {} 
+}
+
+	a The class Home will be provided a default constructor.
+*	b The class Home won’t be provided a default constructor.
+*	c A default constructor can’t coexist with overloaded constructors.
+*	d A default constructor doesn’t accept any method parameters.
+*	e After compilation, the class Home has only a no-argument constructor.
+	f After  compilation,  the  class Home has  two  constructors:  a  no-argument  constructor and a default constructor.
+	g When an object of class Home is created, its variables name and rooms are not assigned any default values.
+
+ME-Q30. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will make the code print numbers that are completely divisible by 14? (Select 1 option.)
+
+for (int ctr = 2; ctr <= 30; ++ctr) {
+if (ctr % 7 != 0)
+//INSERT CODE HERE
+if (ctr % 14 == 0)
+System.out.println(ctr);
+}
+
+*	a continue;
+	b exit;
+	c break;
+	d end;
+
+ME-Q31. Ideally,  which  of  the  following  should  never  be  handled  by  an  exception handler? (Select 2 options.)
+
+	a StackOverflowError
+*	b OutOfMemoryError
+	c ArrayIndexOutOfBoundError
+	d ClassLoadingException
+	e CompilationError
+*	f OutOfStorageError
+
+ME-Q32. What is the output of the following code? (Select 1 option.)
+
+public class MyCalendar {
+public static void main(String arguments[]) {
+Season season1 = new Season();
+season1.name = "Spring";
+Season season2 = new Season();
+season2.name = "Autumn";
+season1 = season2;
+System.out.println(season1.name);
+System.out.println(season2.name);
+}
+}
+class Season {
+String name;
+}
+
+	a 	String
+		Autumn
+	b 	Spring
+		String
+*	c 	Autumn
+		Autumn
+	d 	Autumn
+		String
+
+ME-Q33. What is true about the following code? (Select 1 option.)
+
+class Shoe {}
+class Boot extends Shoe {}
+class ShoeFactory {
+ShoeFactory(Boot val) {
+System.out.println("boot");
+}
+ShoeFactory(Shoe val) {
+System.out.println("shoe");
+}
+}
+
+*	a The class ShoeFactory has a total of two overloaded constructors.
+	b The class ShoeFactory has three overloaded constructors, two user-defined
+	constructors, and one default constructor.
+	c The class ShoeFactory will fail to compile.
+	d The addition of the following constructor will increment the number of constructors of the class ShoeFactoryto 3:
+	private ShoeFactory (Shoe arg) {}
+
+ME-Q34. Given the following definitions of the classes ColorPencil and TestColor,
+which option, if used to replace /* INSERT CODE HERE */, will initialize the instance
+variable color of  reference  variable myPencil with  the String literal  value "RED"?
+(Select 1 option.)
+
+class ColorPencil {
+String color;
+ColorPencil(String color) {
+//INSERT CODE HERE
+}
+}
+class TestColor {
+ColorPencil myPencil = new ColorPencil("RED");
+}
+
+*	a this.color = color;
+	b color = color;
+	c color = RED;
+	d this.color = RED;
+
+ME-Q35. What is the output of the following code? (Select 1 option.)
+
+class EJavaCourse {
+String courseName = "Java";
+}
+class University {
+public static void main(String args[]) {
+EJavaCourse courses[] = { new EJavaCourse(), new EJavaCourse() };
+courses[0].courseName = "OCA";
+for (EJavaCourse c : courses) c = new EJavaCourse();
+for (EJavaCourse c : courses) System.out.println(c.courseName);
+}
+}
+
+	a 	Java
+		Java
+*	b 	OCA
+		Java
+	c 	OCA
+		OCA
+	d 	None of the above.
+
+ME-Q36. Given the following code, which option, if used to replace /* INSERT CODE HERE
+*/, will make the code print the value of the variable screenSize? (Select 1 option.)
+
+class Tablet {
+float screenSize = 7.0f;
+float getScreenSize() {
+return screenSize;
+}
+void setScreenSize(float val) {
+screenSize = val;
+}
+}
+class DemoTabs {
+public static void main(String args[]) {
+Tablet tab = new Tablet();
+System.out.println(/* INSERT CODE HERE */);
+}
+}
+
+*	a tab.screenSize
+	b tab->getScreensize()
+	c tab::getScreen()
+	d tab:screenSize
+
+ME-Q37. Given  the  following  definitions  of  the  class Person and  the  interface
+Movable,  the  task  is  to  declare  a  class Emp that  inherits  from  the  class  Person and
+implements the interface Movable. Select the correct option to accomplish this task
+(choose 1 option):
+
+class Person {}
+interface Movable {}
+
+	a class Emp implements Person extends Movable{}
+	b class Emp implements Person, Movable{}
+*	c class Emp extends Person implements Movable{}
+	d class Emp extends Person, Movable{}
+
+ME-Q38. What is the output of the following code? (Select 1 option.)
+
+class Phone {
+static void call() {
+System.out.println("Call-Phone");
+}
+}
+class SmartPhone extends Phone{
+static void call() {
+System.out.println("Call-SmartPhone");
+}
+}
+class TestPhones {
+public static void main(String... args) {
+Phone phone = new Phone();
+Phone smartPhone = new SmartPhone();
+phone.call();
+smartPhone.call();
+}
+}
+
+	a 	Call-Phone
+		Call-Phone
+*	b 	Call-Phone
+		Call-SmartPhone
+	c 	Call-Phone
+		null
+	d 	null
+		Call-SmartPhone
+
+ME-Q39. Given the following code, which of the following statements are true? (Select 3 options.)
+
+class MyExam {
+void question() {
+try {
+question();
+}
+catch (StackOverflowError e) {
+System.out.println("caught");
+}
+}
+public static void main(String args[]) {
+new MyExam().question();
+}
+}
+
+*	a The code will print caught.
+	b The code won’t print caught.
+*	c The code would print caught if StackOverflowError were a runtime exception.
+*	d The code would print caught if StackOverflowError were a checked exception.
+	e The code will print caught if question() throws exception NullPointerException.
+
+ME-Q40. A class Student is defined as follows:
+
+public class Student {
+private String fName;
+private String lName;
+public Student(String first, String last) {
+fName = first; lName = last;
+}
+public String getName() { return fName + lName; }
+}
+
+The creator of the class later changes the method getName as follows:
+
+public String getName() { 
+return fName + " " + lName; 
+}
+
+What are the implications of this change? (Select 2 options.)
+
+	a The classes that were using the class Student will fail to compile.
+	b The classes that were using the class Student will work without any compilation issues.
+	c The class Studentis an example of a well-encapsulated class.
+	d The class Student exposes its instance variable outside the class.
+
+ME-Q41. What is the output of the following code? (Select 1 option.)
+class ColorPack {
+int shadeCount = 12;
+static int getShadeCount() {
+return shadeCount;
+}
+}
+class Artist {
+public static void main(String args[]) {
+ColorPack pack1 = new ColorPack();
+System.out.println(pack1.getShadeCount());
+}
+}
+a 10
+b 12
+c No output 
+d Compilation error
+ME-Q42. Paul  defined  his Laptop and Workshop classes  to  upgrade  his  laptop’s
+memory.  Do  you  think  he  succeeded?  What  is  the  output  of  this  code?  (Select
+1option.)
+class Laptop {
+String memory = "1GB";
+}
+class Workshop {
+public static void main(String args[]) {
+Laptop life = new Laptop();
+repair(life);
+System.out.println(life.memory);
+}
+public static void repair(Laptop laptop) {
+laptop.memory = "2GB";
+}
+}
+a 1 GB
+b 2 GB
+c Compilation error
+d Runtime exception
+ME-Q43. What is the output of the following code? (Select 1 option.)
+public class Application {
+public static void main(String... args) {
+double price = 10;
+String model;
+if (price > 10)
+model = "Smartphone";
+else if (price <= 10)
+model = "landline";
+System.out.println(model);
+}
+}
+a landline
+b Smartphone
+c No output
+d Compilation error
+ME-Q44. What is the output of the following code? (Select 1 option.)
+class EString {
+public static void main(String args[]) {
+String eVal = "123456789";
+System.out.println(eVal.substring(eVal.indexOf("2"),eVal.indexOf("0")).concat
+("0"));
+}
+}
+a 234567890
+b 34567890
+c 234456789
+d 3456789
+e Compilation error
+f Runtime exception
+ME-Q45. Examine  the  following  code  and  select  the  correct  statements  (choose
+2options):
+class Artist {
+Artist assistant;
+}
+class Studio {
+public static void main(String... args) {
+Artist a1 = new Artist();
+Artist a2 = new Artist();
+a2.assistant = a1;
+a2 = null; // Line 1
+} 
+// Line 2
+}
+a At least two objects are garbage collected on line 1.
+b At least one object is garbage collected on line 1.
+c No objects are garbage collected on line 1.
+d The number of objects that are garbage collected on line 1 is unknown.
+e At least two objects are eligible for garbage collection on line 2.
+ME-Q46. What is the output of the following code? (Select 1 option.)
+class Book {
+String ISBN;
+Book(String val) {
+ISBN = val;
+}
+}
+class TestEquals {
+public static void main(String... args) {
+Book b1 = new Book("1234-4657");
+Book b2 = new Book("1234-4657");
+System.out.print(b1.equals(b2) +":");
+System.out.print(b1 == b2);
+}
+}
+a true:false
+b true:true
+c false:true
+d false:false
+e Compilation error—there is no equalsmethod in the class Book.
+ME-Q47. Which of the following statements are correct? (Select 2 options.)
+a StringBuilder sb1 = new StringBuilder()will create a StringBuilderobject
+with no characters, but with an initial capacity to store 16 chars.
+b StringBuilder sb1 = new StringBuilder(5*10)will create a StringBuilder
+object with a value 50.
+c Unlike the class String, the concatmethod in StringBuildermodifies the
+value of a StringBuilderobject.
+d The insertmethod can be used to insert a character, number, or Stringat
+the start or end or at a specified position of a StringBuilderobject.
+ME-Q48. Given the following definition of the class Animaland the interface Jump,
+select the correct array declarations and initialization (choose 3 options):
+interface Jump {}
+class Animal implements Jump {}
+a Jump eJump1[] = {null, new Animal()};
+b Jump[] eJump2 = new Animal()[22];
+c Jump[] eJump3 = new Jump[10];
+d Jump[] eJump4 = new Animal[87];
+e Jump[] eJump5 = new Jump()[12];
+ME-Q49. What is the output of the following code? (Select 1 option.)
+import java.util.*;
+class EJGArrayL {
+public static void main(String args[]) {
+ArrayList<String> seasons = new ArrayList<String>();
+seasons.add(1, "Spring"); seasons.add(2, "Summer");
+seasons.add(3, "Autumn"); seasons.add(4, "Winter");
+seasons.remove(2);
+for (String s : seasons)
+System.out.print(s + ", ");
+}
+}
+a Spring, Summer, Winter,
+b Spring, Autumn, Winter,
+c Autumn, Winter,
+d Compilation error
+e Runtime exception
+ME-Q50. What is the output of the following code? (Select 1 option.)
+class EIf {
+public static void main(String args[]) {
+bool boolean = false;
+if (boolean = true)
+System.out.println("true");
+else 
+System.out.println("false");
+}
+}
+a The class will print true.
+b The class will print false.
+c The class will print trueif the ifcondition is changed to boolean == true.
+d The class will print falseif the ifcondition is changed to boolean != true.
+e The class won’t compile.
+ME-Q51. How many Fishdid the Whale(defined as follows) manage to eat? Examine
+the following code and select the correct statements (choose 2 options):
+class Whale {
+public static void main(String args[]) {
+boolean hungry = false;
+while (hungry=true) {
+++Fish.count;
+}
+System.out.println(Fish.count);
+}
+}
+class Fish {
+static byte count;
+}
+a The code doesn’t compile.
+b The code doesn’t print a value.
+c The code prints 0.
+d Changing ++Fish.countto Fish.count++will give the same results.
+ME-Q52. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will make the code print the name of the phone with the position at which
+it’s stored in the array phone? (Select 1 option.)
+class Phones {
+public static void main(String args[]) {
+String phones[]= {"BlackBerry", "Android", "iPhone"};
+for (String phone : phones)
+/* REPLACE CODE HERE */
+}
+}
+a System.out.println(phones.count + ":" + phone);
+b System.out.println(phones.counter + ":" + phone);
+c System.out.println(phones.getPosition() + ":" + phone);
+d System.out.println(phones.getCtr() + ":" + phone);
+e System.out.println(phones.getCount() + ":" + phone);
+f System.out.println(phones.pos + ":" + phone);
+g None of the above
+ME-Q53. Which of the following classes represent runtime exceptions in Java (select
+4options):
+a RuntimeException
+b CheckedException
+c NullPointerException
+d ArrayIndexOutOfBoundsException
+e CompilationException
+f Throwable
+g StackOverflowException
+h MemoryOutOfBoundsException
+i IllegalArgumentException
+j NumberException
+ME-Q54. What is the output of the following code? (Select 1 option.)
+class Book {
+String ISBN;
+Book(String val) {
+ISBN = val;
+}
+public boolean equals(Object b) {
+if (b instanceof Book) {
+return ((Book)b).ISBN.equals(ISBN);
+}
+else
+return false;
+}
+}
+class TestEquals {
+public static void main(String args[]) {
+Book b1 = new Book("1234-4657");
+Book b2 = new Book("1234-4657");
+System.out.print(b1.equals(b2) +":");
+System.out.print(b1 == b2);
+}
+}
+a true:false
+b true:true
+c false:true
+d false:false
+ME-Q55. What is the output of the following code? (Select 1 option.)
+int a = 10;
+for (; a <= 20; ++a) {
+if (a%3 == 0) a++; else if (a%2 == 0) a=a*2;
+System.out.println(a);
+}
+a 11
+13
+15
+17
+19
+b 20
+c 11
+14
+17
+20
+d 40
+e Compilation error
+ME-Q56. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will define an overloaded rideWavemethod (select 1 option):
+class Raft {
+public String rideWave() { return null; }
+//INSERT CODE HERE
+}
+a public String[] rideWave() { return null; }
+b protected void riceWave(int a) {}
+c private void rideWave(int value, String value2) {}
+d default StringBuilder rideWave(StringBuffer a) { return null; }
+ME-Q57. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will correctly calculate the sum of all the even numbers in the array numand
+store it in variable sum? (Select 1 option.)
+int num[] = {10, 15, 2, 17};
+int sum = 0;
+for (int number : num) {
+//INSERT CODE HERE
+sum += number;
+}
+a if (number % 2 == 0)
+continue;
+b if (number % 2 == 0)
+break;
+c if (number % 2 != 0)
+continue;
+d if (number % 2 != 0)
+break;
+ME-Q58. What is the output of the following code? (Select 1 option.)
+class Op {
+public static void main(String... args) {
+int a = 0;
+int b = 100;
+if (!b++ > 100 && a++ == 10) {
+System.out.println(a+b);
+}
+}
+}
+a 100
+b 101
+c 102
+d Code fails to compile.
+e No output is produced.
+ME-Q59. Given the following definitions of the interfaces Movableand Jumpable, the
+task is to declare a class Personthat inherits both of these interfaces. Which of the following code snippets will accomplish this task? (Select 2 options.)
+interface Movable {}
+interface Jumpable {}
+a interface Movable {}
+interface Jumpable {}
+class Person implements Movable, Jumpable {}
+b interface Movable {}
+interface Jumpable {}
+class Person extends Movable, Jumpable {}
+c interface Movable {}
+interface Jumpable {}
+class Person implements Movable extends Jumpable {}
+d interface Movable {}
+interface Jumpable implements Movable {}
+class Person implements Jumpable {}
+e interface Movable {}
+interface Jumpable extends Movable {}
+class Person implements Jumpable {}
+ME-Q60. Choose  the  option  that  meets  the  following  specification:  Create  a  wellencapsulated  class Pencil with  one  instance  variable model.  The  value  of model
+should be accessible and modifiable outside Pencil. (Select 1 option.)
+a class Pencil {
+public String model;
+}
+b class Pencil {
+public String model;
+public String getModel() { return model; }
+public void setModel(String val) { model = val; }
+}
+c class Pencil {
+private String model;
+public String getModel() { return model; }
+public void setModel(String val) { model = val; }
+}
+d class Pencil {
+public String model;
+private String getModel() { return model; }
+private void setModel(String val) { model = val; }
+}
+ME-Q61. What is the output of the following code? (Select 1 option.)
+class Phone {
+void call() {
+System.out.println("Call-Phone");
+}
+}
+class SmartPhone extends Phone{
+void call() {
+System.out.println("Call-SmartPhone");
+}
+}
+class TestPhones {
+public static void main(String[] args) {
+Phone phone = new Phone();
+Phone smartPhone = new SmartPhone();
+phone.call();
+smartPhone.call();
+}
+}
+a Call-Phone
+Call-Phone
+b Call-Phone
+Call-SmartPhone
+c Call-Phone
+null
+d null
+Call-SmartPhone
+ME-Q62. Given  the  following  requirements,  choose  the  best  looping  construct  to
+implement them (choose 1 option):
+Step 1: Meet the director of Oracle. 
+Step 2: Schedule another meeting with the director. 
+Step 3: Repeat steps 1 and 2, as long as more meetings are required.
+a forloop
+b enhanced forloop
+c do-whileloop
+d  whileloop
+ME-Q63. What is the output of the following code? (Select 1 option.)
+class Phone {
+String keyboard = "in-built";
+}
+class Tablet extends Phone {
+boolean playMovie = false;
+}
+class College2 {
+public static void main(String args[]) {
+Phone phone = new Tablet();
+System.out.println(phone.keyboard + ":" + phone.playMovie);
+}
+}
+a in-built:false
+b in-built:true
+c null:false
+d null:true
+e Compilation error
+ME-Q64. What is the output of the following code? (Select 1 option.)
+public class Wall {
+public static void main(String args[]) {
+double area = 10.98;
+String color;
+if (area < 5)
+color = "red";
+else
+color = "blue";
+System.out.println(color);
+}
+}
+a red
+b blue
+c No output
+d Compilation error
+ME-Q65. What is the output of the following code? (Select 1 option.)
+class Diary {
+int pageCount = 100;
+int getPageCount() {
+return pageCount;
+}
+void setPageCount(int val) {
+pageCount = val;
+}
+}
+class ClassRoom {
+public static void main(String args[]) {
+System.out.println(new Diary().getPageCount());
+new Diary().setPageCount(200);
+System.out.println(new Diary().getPageCount());
+}
+}
+a 100
+200
+b 100
+100
+c 200
+200
+d Code fails to compile.
+ME-Q66. How many times do you think you can shop with the following code (that is,
+what’s the output of the following code)? (Select 1 option.)
+class Shopping {
+public static void main(String args[]) {
+boolean bankrupt = true;
+do System.out.println("enjoying shopping"); bankrupt = false;
+while (!bankrupt);
+}
+}
+a The code prints enjoying shoppingonce.
+b The code prints enjoying shoppingtwice.
+c The code prints enjoying shoppingin an infinite loop.
+d The code fails to compile.
+ME-Q67. Which  of  the  following  options  are  valid  for  defining  multidimensional
+arrays? (Choose 4 options.)
+a String ejg1[][] = new String[1][2];
+b String ejg2[][] = new String[][] { {}, {} };
+c String ejg3[][] = new String[2][2];
+d String ejg4[][] = new String[][]{{null},new String[]{"a","b","c"},
+{new String()}};
+e String ejg5[][] = new String[][2];
+f String ejg6[][] = new String[][]{"A", "B"};
+g String ejg7[][] = new String[]{{"A"}, {"B"}};
+ME-Q68. What is the output of the following code? (Select 1 option.)
+class Laptop {
+String memory = "1GB";
+}
+class Workshop {
+public static void main(String args[]) {
+Laptop life = new Laptop();
+repair(life);
+System.out.println(life.memory);
+}
+public static void repair(Laptop laptop) {
+laptop = new Laptop();
+laptop.memory = "2GB";
+}
+}
+a 1 GB
+b 2 GB
+c Compilation error
+d Runtime exception
+ME-Q69. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will enable a reference variable of type Roamableto refer to an object of the
+Phoneclass? (Select 1 option.)
+interface Roamable{}
+class Phone {}
+class Tablet extends Phone implements Roamable {
+//INSERT CODE HERE
+}
+a Roamable var = new Phone();
+b Roamable var = (Roamable)Phone();
+c Roamable var = (Roamable)new Phone();
+d Because  the  interface Roamable and  the  class  Phone are  unrelated,  a  reference variable of type Roamablecan’t refer to an object of class Phone.
+ME-Q70. Which of the following statements are incorrect about the mainmethod used
+to start a Java application? (Select 2 options.)
+a A class can’t define multiple mainmethods.
+b More than one class in an application can define the mainmethod.
+c The mainmethod may accept a String, a Stringarray, or varargs (String...
+arg) as a method argument.
+d The mainmethod shouldn’t define an object of the class in which the main
+method itself is defined.
+ME-Q71. What is the output of the following code? (Select 1 option.)
+class Paper {
+Paper() {
+this(10);
+System.out.println("Paper:0");
+}
+Paper(int a) { System.out.println("Paper:1"); }
+}
+class PostIt extends Paper {}
+class TestPostIt {
+public static void main(String[] args) {
+Paper paper = new PostIt();
+}
+}
+a Paper:1
+b Paper:0
+c Paper:0
+Paper:1
+d Paper:1
+Paper:0
+ME-Q72. Examine  the  following  code  and  select  the  correct  statement  (choose
+1 option):
+line1> class StringBuilders {
+line2> public static void main(String... args) {
+line3> StringBuilder sb1 = new StringBuilder("eLion");
+line4> String ejg = null;
+line5> ejg = sb1.append("X").substring(sb1.indexOf("L"), 
+sb1.indexOf("X"));
+line6> System.out.println(ejg);
+line7> }
+line8> }
+a The code will print LionX.
+b The code will print Lion.
+c The code will print Lionif line 5 is changed to the following:
+ejg = sb1.append("X").substring(sb1.indexOf('L'), sb1.indexOf('X'));
+d The code will compile correctly if line 4 is changed to the following:
+StringBuilder ejg = null;
+ME-Q73. When considered individually, which of the options is correct for the following code? (Select 1 option.)
+interface Jumpable { void jump(); }
+class Chair implements Jumpable {
+public void jump() {
+System.out.println("Chair cannot jump");
+}
+}
+a The  class Chair can’t  implement  the  interface Jumpable because  a Chair
+can’t define a method jump.
+b If the name of the interface is changed to Movableand the definition of class
+Chairis updated to class Chair implements Movable, class Chairwill compile successfully.
+c If the definition of the method jumpis removed from the definition of the
+class Chair, it will compile successfully.
+d If the name of the method jumpis changed to runin the interface Jumpable,
+the class Chairwill compile successfully.
+ME-Q74. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */,  will  enable  the  class Jungle to  determine  whether  the  reference  variable
+animalrefers to an object of the class Lionand print 1? (Select 1 option.)
+class Animal{ float age; }
+class Lion extends Animal { int claws;}
+class Jungle {
+public static void main(String args[]) {
+Animal animal = new Lion();
+/* INSERT CODE HERE */
+System.out.println(1);
+}
+}
+a if (animal instanceof Lion)
+b if (animal instanceOf Lion)
+c if (animal == Lion)
+d if (animal = Lion)
+ME-Q75. Given that the file Test.java, which defines the following code, fails to compile, select the reasons for the compilation failure (choose 2 options):
+class Person {
+Person(String value) {}
+}
+class Employee extends Person {}
+class Test {
+public static void main(String args[]) {
+Employee e = new Employee();
+}
+}
+a The class Personfails to compile.
+b The class Employeefails to compile.
+c The default constructor can call only a no-argument constructor of a base class.
+d Code  that  creates  an  object  of  class Employee in  class Test didn’t  pass  a
+Stringvalue to the constructor of class Employee.
+ME-Q76. Select the correct statements. (Choose 4 options.)
+a Checked exceptions are subclasses of java.lang.Throwable.
+b Runtime exceptions are subclasses of java.lang.Exception.
+c Errors are subclasses of java.lang.Throwable. 
+d java.lang.Throwableis a subclass of java.lang.Exception.
+e java.lang.Exceptionis a subclass of java.lang.Error.
+f Errors aren’t subclasses of java.lang.Exception.
+g java.lang.Throwableis a subclass of java.lang.Error.
+h Checked exceptions are subclasses of java.lang.CheckedException.
+ME-Q77. Examine  the  following  code  and  select  the  correct  statements  (choose
+2options):
+class Bottle {
+void Bottle() {}
+void Bottle(WaterBottle w) {}
+}
+class WaterBottle extends Bottle {}
+a A  base  class  can’t  pass  reference  variables  of  its  defined  class  as  method
+parameters in constructors.
+b The class compiles successfully—a base class can use reference variables of its
+derived class as method parameters.
+c The class Bottledefines two overloaded constructors.
+d The class Bottlecan access only one constructor.
+ME-Q78. Given the following code, which option, if used to replace /* INSERT CODE
+HERE */, will cause the code to print 110? (Select 1 option.)
+class Book {
+private int pages = 100;
+}
+class Magazine extends Book {
+private int interviews = 2;
+private int totalPages() { /* INSERT CODE HERE */ }
+public static void main(String[] args) {
+System.out.println(new Magazine().totalPages());
+}
+}
+a return super.pages + this.interviews*5;
+b return this.pages + this.interviews*5;
+c return super.pages + interviews*5;
+d return pages + this.interviews*5;
+e None of the above
+ME-Q79. Given that the method writehas been defined as follows,
+class NoInkException extends Exception {}
+class Pen{
+void write(String val) throws NoInkException {
+//.. some code
+}
+void article() {
+//INSERT CODE HERE
+}
+}
+which of the following options, when inserted at //INSERT CODE HERE, will define valid
+use of the method writein the method article? (Select 2 options.)
+a try {
+new Pen().write("story");
+}
+catch (NoInkException e) {} 
+b try {
+new Pen().write("story");
+}
+finally {}
+c try {
+write("story");
+}
+catch (Exception e) {}
+d try {
+new Pen().write("story");
+}
+catch (RuntimeException e) {}
+ME-Q80. What is the output of the following code? (Select 1 option.)
+class EMyMethods {
+static String name = "m1";
+void riverRafting() {
+String name = "m2";
+if (8 > 2) {
+String name = "m3";
+System.out.println(name);
+}
+}
+public static void main(String[] args) {
+EMyMethods m1 = new EMyMethods();
+m1.riverRafting();
+}
+}
+a m1
+b m2
+c m3
+d Code fails to compile.
+ME-Q81. What is the output of the following code? (Select 1 option.)
+class EBowl {
+public static void main(String args[]) {
+String eFood = "Corn";
+System.out.println(eFood);
+mix(eFood);
+System.out.println(eFood);
+}
+static void mix(String foodIn) {
+foodIn.concat("A");
+foodIn.replace('C', 'B');
+}
+}
+a Corn
+BornA
+b Corn
+CornA
+c Corn
+Born
+d Corn
+Corn
+ME-Q82. Which statement is true for the following code? (Select 1 option.)
+class SwJava {
+public static void main(String args[]) {
+String[] shapes = {"Circle", "Square", "Triangle"};
+switch (shapes) {
+case "Square": System.out.println("Circle"); break;
+case "Triangle": System.out.println("Square"); break;
+case "Circle": System.out.println("Triangle"); break;
+}
+}
+}
+a The code prints Circle.
+b The code prints Square.
+c The code prints Triangle.
+d The code prints
+Circle
+Square
+Triangle
+e The code prints 
+Triangle
+Circle
+Square
+f The code fails to compile.
+ME-Q83. Which of the following options include the ideal conditions for choosing to
+use a do-whileloop over a whileloop? (Select 2 options.)
+a Repeatedly display a menu to a user and accept input until the user chooses
+to exit the application.
+b Repeatedly allow a student to sit in the exam only if she carries her identity card.
+c Repeatedly serve food to a person until he wants no more.
+d Repeatedly allow each passenger to board an airplane if the passengers have
+their boarding passes.
+ME-Q84. Given  the  following  definition  of  the  classes Person, Father,  and Home,
+which options, if used to replace /* INSERT CODE HERE */, will cause the code to compile successfully (select 3 options):
+class Person {}
+class Father extends Person {
+public void dance() throws ClassCastException {}
+}
+class Home {
+public static void main(String args[]) {
+Person p = new Person();
+try {
+((Father)p).dance();
+}
+//INSERT CODE HERE
+}
+}
+a catch (NullPointerException e) {}
+catch (ClassCastException e) {}
+catch (Exception e) {}
+catch (Throwable t) {}
+b catch (ClassCastException e) {}
+catch (NullPointerException e) {}
+catch (Exception e) {}
+catch (Throwable t) {}
+c catch (ClassCastException e) {}
+catch (Exception e) {}
+catch (NullPointerException e) {}
+catch (Throwable t) {}
+d catch (Throwable t) {}
+catch (Exception e) {}
+catch (ClassCastException e) {}
+catch (NullPointerException e) {}
+e finally {}
+ME-Q85. What is the output of the following code? (Select 1 option.)
+class Camera {
+public static void main(String args[]) {
+String settings;
+while (false) {
+settings = "Adjust settings manually";
+}
+System.out.println("Camera:" + settings);
+}
+}
+a The code prints Camera:null.
+b The code prints Camera:Adjust settings manually.
+c The code will print Camera:.
+d The code will fail to compile.
+ME-Q86. The output of the class TestEJavaCourse, defined as follows, is 300:
+class Course {
+int enrollments;
+}
+class TestEJavaCourse {
+public static void main(String args[]) {
+Course c1 = new Course();
+Course c2 = new Course();
+c1.enrollments = 100;
+c2.enrollments = 200;
+System.out.println(c1.enrollments + c2.enrollments);
+}
+}
+What will happen if the variable enrollmentsis defined as a staticvariable? (Select
+1option.)
+a No change in output. TestEJavaCourseprints 300.
+b Change in output. TestEJavaCourseprints 200.
+c Change in output. TestEJavaCourseprints 400.
+d The class TestEJavaCoursefails to compile.
+ME-Q87. What is the output of the following code? (Select 1 option.)
+String ejgStr[] = new String[][]{{null},new String[]{"a","b","c"},{new 
+String()}}[0] ;
+String ejgStr1[] = null;
+String ejgStr2[] = {null};
+System.out.println(ejgStr[0]);
+System.out.println(ejgStr2[0]);
+System.out.println(ejgStr1[0]);
+a null
+NullPointerException
+b null
+null
+NullPointerException
+c NullPointerException
+d null
+null
+null
+ME-Q88. Examine  the  following  code  and  select  the  correct  statement  (choose
+1 option):
+import java.util.*;
+class Person {}
+class Emp extends Person {}
+class TestArrayList {
+public static void main(String[] args) {
+ArrayList<Object> list = new ArrayList<Object>();
+list.add(new String("1234")); //LINE1
+list.add(new Person()); //LINE2
+list.add(new Emp()); //LINE3
+list.add(new String[]{"abcd", "xyz"});//LINE4
+}
+}
+a The code on line 1 won’t compile.
+b The code on line 2 won’t compile.
+c The code on line 3 won’t compile.
+d The code on line 4 won’t compile.
+e None of the above.
+ME-Q89. What is the output of the following code? (Select 1 option.)
+public class If2 {
+public static void main(String args[]) {
+int a = 10; int b = 20; boolean c = false;
+if (b > a) if (++a == 10) if (c!=true) System.out.println(1);
+else System.out.println(2); else System.out.println(3);
+}
+}
+a 1
+b 2
+c 3
+d No output
+ME-Q90. Select the incorrect statement (choose 1 option):
+a An  enhanced for loop  can  be  used  to  iterate  through  the  elements  of  an
+array and ArrayList.
+b The loop counter of an enhanced forloop can be used to modify the current
+element of the array being iterated over.
+c do-whileand whileloops can be used to iterate through the elements of an
+array and ArrayList. 
+d The loop counter of a regular forloop can be used to modify the current element of an ArrayListbeing iterated over
