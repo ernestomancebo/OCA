@@ -709,11 +709,12 @@ return fName + " " + lName;
 What are the implications of this change? (Select 2 options.)
 
 	a The classes that were using the class Student will fail to compile.
-	b The classes that were using the class Student will work without any compilation issues.
-	c The class Studentis an example of a well-encapsulated class.
+*	b The classes that were using the class Student will work without any compilation issues.
+*	c The class Student is an example of a well-encapsulated class.
 	d The class Student exposes its instance variable outside the class.
 
 ME-Q41. What is the output of the following code? (Select 1 option.)
+
 class ColorPack {
 int shadeCount = 12;
 static int getShadeCount() {
@@ -726,13 +727,15 @@ ColorPack pack1 = new ColorPack();
 System.out.println(pack1.getShadeCount());
 }
 }
-a 10
-b 12
-c No output 
-d Compilation error
+
+	a 10
+	b 12
+	c No output 
+*	d Compilation error
+
 ME-Q42. Paul  defined  his Laptop and Workshop classes  to  upgrade  his  laptop’s
-memory.  Do  you  think  he  succeeded?  What  is  the  output  of  this  code?  (Select
-1option.)
+memory.  Do  you  think  he  succeeded?  What  is  the  output  of  this  code?  (Select 1 option.)
+
 class Laptop {
 String memory = "1GB";
 }
@@ -746,11 +749,14 @@ public static void repair(Laptop laptop) {
 laptop.memory = "2GB";
 }
 }
-a 1 GB
-b 2 GB
-c Compilation error
-d Runtime exception
+
+	a 1 GB
+*	b 2 GB
+	c Compilation error
+	d Runtime exception
+
 ME-Q43. What is the output of the following code? (Select 1 option.)
+
 public class Application {
 public static void main(String... args) {
 double price = 10;
@@ -762,26 +768,30 @@ model = "landline";
 System.out.println(model);
 }
 }
-a landline
-b Smartphone
-c No output
-d Compilation error
+
+*	a landline
+	b Smartphone
+	c No output
+	d Compilation error
+
 ME-Q44. What is the output of the following code? (Select 1 option.)
+
 class EString {
 public static void main(String args[]) {
 String eVal = "123456789";
-System.out.println(eVal.substring(eVal.indexOf("2"),eVal.indexOf("0")).concat
-("0"));
+System.out.println(eVal.substring(eVal.indexOf("2"),eVal.indexOf("0")).concat("0"));
 }
 }
-a 234567890
-b 34567890
-c 234456789
-d 3456789
-e Compilation error
-f Runtime exception
-ME-Q45. Examine  the  following  code  and  select  the  correct  statements  (choose
-2options):
+
+	a 234567890
+	b 34567890
+	c 234456789
+	d 3456789
+	e Compilation error
+*	f Runtime exception
+
+ME-Q45. Examine  the  following  code  and  select  the  correct  statements  (choose 2 options):
+
 class Artist {
 Artist assistant;
 }
@@ -794,12 +804,15 @@ a2 = null; // Line 1
 } 
 // Line 2
 }
-a At least two objects are garbage collected on line 1.
-b At least one object is garbage collected on line 1.
-c No objects are garbage collected on line 1.
-d The number of objects that are garbage collected on line 1 is unknown.
-e At least two objects are eligible for garbage collection on line 2.
+
+*	a At least two objects are garbage collected on line 1.
+	b At least one object is garbage collected on line 1.
+*	c No objects are garbage collected on line 1.
+	d The number of objects that are garbage collected on line 1 is unknown.
+	e At least two objects are eligible for garbage collection on line 2.
+
 ME-Q46. What is the output of the following code? (Select 1 option.)
+
 class Book {
 String ISBN;
 Book(String val) {
@@ -814,30 +827,34 @@ System.out.print(b1.equals(b2) +":");
 System.out.print(b1 == b2);
 }
 }
-a true:false
-b true:true
-c false:true
-d false:false
-e Compilation error—there is no equalsmethod in the class Book.
+
+	a true:false
+	b true:true
+	c false:true
+*	d false:false
+	e Compilation error—there is no equals method in the class Book.
+
 ME-Q47. Which of the following statements are correct? (Select 2 options.)
-a StringBuilder sb1 = new StringBuilder()will create a StringBuilderobject
-with no characters, but with an initial capacity to store 16 chars.
-b StringBuilder sb1 = new StringBuilder(5*10)will create a StringBuilder
-object with a value 50.
-c Unlike the class String, the concatmethod in StringBuildermodifies the
-value of a StringBuilderobject.
-d The insertmethod can be used to insert a character, number, or Stringat
-the start or end or at a specified position of a StringBuilderobject.
-ME-Q48. Given the following definition of the class Animaland the interface Jump,
+
+*	a StringBuilder sb1 = new StringBuilder() will create a StringBuilderobject with no characters, but with an initial capacity to store 16 chars.
+	b StringBuilder sb1 = new StringBuilder(5*10) will create a StringBuilder object with a value 50.
+*	c Unlike the class String, the concat method in StringBuilder modifies the	value of a StringBuilder object.
+	d The insert method can be used to insert a character, number, or String at	the start or end or at a specified position of a StringBuilder object.
+
+ME-Q48. Given the following definition of the class Animal and the interface Jump,
 select the correct array declarations and initialization (choose 3 options):
+
 interface Jump {}
 class Animal implements Jump {}
-a Jump eJump1[] = {null, new Animal()};
-b Jump[] eJump2 = new Animal()[22];
-c Jump[] eJump3 = new Jump[10];
-d Jump[] eJump4 = new Animal[87];
-e Jump[] eJump5 = new Jump()[12];
+
+*	a Jump eJump1[] = {null, new Animal()};
+*	b Jump[] eJump2 = new Animal()[22];
+	c Jump[] eJump3 = new Jump[10];
+*	d Jump[] eJump4 = new Animal[87];
+	e Jump[] eJump5 = new Jump()[12];
+
 ME-Q49. What is the output of the following code? (Select 1 option.)
+
 import java.util.*;
 class EJGArrayL {
 public static void main(String args[]) {
@@ -849,12 +866,15 @@ for (String s : seasons)
 System.out.print(s + ", ");
 }
 }
-a Spring, Summer, Winter,
-b Spring, Autumn, Winter,
-c Autumn, Winter,
-d Compilation error
-e Runtime exception
+
+*	a Spring, Summer, Winter,
+	b Spring, Autumn, Winter,
+	c Autumn, Winter,
+	d Compilation error
+	e Runtime exception
+
 ME-Q50. What is the output of the following code? (Select 1 option.)
+
 class EIf {
 public static void main(String args[]) {
 bool boolean = false;
@@ -864,13 +884,16 @@ else
 System.out.println("false");
 }
 }
-a The class will print true.
-b The class will print false.
-c The class will print trueif the ifcondition is changed to boolean == true.
-d The class will print falseif the ifcondition is changed to boolean != true.
-e The class won’t compile.
-ME-Q51. How many Fishdid the Whale(defined as follows) manage to eat? Examine
+
+	a The class will print true.
+	b The class will print false.
+	c The class will print true if the if condition is changed to boolean == true.
+	d The class will print false if the if condition is changed to boolean != true.
+*	e The class won’t compile.
+
+ME-Q51. How many Fish did the Whale(defined as follows) manage to eat? Examine
 the following code and select the correct statements (choose 2 options):
+
 class Whale {
 public static void main(String args[]) {
 boolean hungry = false;
@@ -880,16 +903,20 @@ while (hungry=true) {
 System.out.println(Fish.count);
 }
 }
+
 class Fish {
 static byte count;
 }
-a The code doesn’t compile.
-b The code doesn’t print a value.
-c The code prints 0.
-d Changing ++Fish.countto Fish.count++will give the same results.
+
+	a The code doesn’t compile.
+*	b The code doesn’t print a value.
+	c The code prints 0.
+*	d Changing ++Fish.count to Fish.count++ will give the same results.
+
 ME-Q52. Given the following code, which option, if used to replace /* INSERT CODE
 HERE */, will make the code print the name of the phone with the position at which
 it’s stored in the array phone? (Select 1 option.)
+
 class Phones {
 public static void main(String args[]) {
 String phones[]= {"BlackBerry", "Android", "iPhone"};
@@ -897,26 +924,30 @@ for (String phone : phones)
 /* REPLACE CODE HERE */
 }
 }
-a System.out.println(phones.count + ":" + phone);
-b System.out.println(phones.counter + ":" + phone);
-c System.out.println(phones.getPosition() + ":" + phone);
-d System.out.println(phones.getCtr() + ":" + phone);
-e System.out.println(phones.getCount() + ":" + phone);
-f System.out.println(phones.pos + ":" + phone);
-g None of the above
-ME-Q53. Which of the following classes represent runtime exceptions in Java (select
-4options):
-a RuntimeException
-b CheckedException
-c NullPointerException
-d ArrayIndexOutOfBoundsException
-e CompilationException
-f Throwable
-g StackOverflowException
-h MemoryOutOfBoundsException
-i IllegalArgumentException
-j NumberException
+
+	a System.out.println(phones.count + ":" + phone);
+	b System.out.println(phones.counter + ":" + phone);
+	c System.out.println(phones.getPosition() + ":" + phone);
+	d System.out.println(phones.getCtr() + ":" + phone);
+	e System.out.println(phones.getCount() + ":" + phone);
+	f System.out.println(phones.pos + ":" + phone);
+*	g None of the above
+
+ME-Q53. Which of the following classes represent runtime exceptions in Java (select 4 options):
+
+*	a RuntimeException
+	b CheckedException
+*	c NullPointerException
+*	d ArrayIndexOutOfBoundsException
+	e CompilationException
+	f Throwable
+	g StackOverflowException
+	h MemoryOutOfBoundsException
+*	i IllegalArgumentException
+	j NumberException
+
 ME-Q54. What is the output of the following code? (Select 1 option.)
+
 class Book {
 String ISBN;
 Book(String val) {
@@ -938,56 +969,73 @@ System.out.print(b1.equals(b2) +":");
 System.out.print(b1 == b2);
 }
 }
-a true:false
-b true:true
-c false:true
-d false:false
+
+*	a true:false
+	b true:true
+	c false:true
+	d false:false
+
 ME-Q55. What is the output of the following code? (Select 1 option.)
+
 int a = 10;
+
 for (; a <= 20; ++a) {
-if (a%3 == 0) a++; else if (a%2 == 0) a=a*2;
+if (a%3 == 0) 
+a++; 
+else if (a%2 == 0) 
+a=a*2;
+
 System.out.println(a);
 }
-a 11
-13
-15
-17
-19
-b 20
-c 11
-14
-17
-20
-d 40
-e Compilation error
+
+	a 	11
+		13
+		15
+		17
+		19
+*	b 	20
+	c 	11
+		14
+		17
+		20
+	d 	40
+	e 	Compilation error
+
 ME-Q56. Given the following code, which option, if used to replace /* INSERT CODE
-HERE */, will define an overloaded rideWavemethod (select 1 option):
+HERE */, will define an overloaded rideWave method (select 1 option):
+
 class Raft {
 public String rideWave() { return null; }
 //INSERT CODE HERE
 }
-a public String[] rideWave() { return null; }
-b protected void riceWave(int a) {}
-c private void rideWave(int value, String value2) {}
-d default StringBuilder rideWave(StringBuffer a) { return null; }
+
+	a public String[] rideWave() { return null; }
+	b protected void riceWave(int a) {}
+*	c private void rideWave(int value, String value2) {}
+	d default StringBuilder rideWave(StringBuffer a) { return null; }
+
 ME-Q57. Given the following code, which option, if used to replace /* INSERT CODE
-HERE */, will correctly calculate the sum of all the even numbers in the array numand
+HERE */, will correctly calculate the sum of all the even numbers in the array num and
 store it in variable sum? (Select 1 option.)
+
 int num[] = {10, 15, 2, 17};
 int sum = 0;
 for (int number : num) {
 //INSERT CODE HERE
 sum += number;
 }
-a if (number % 2 == 0)
-continue;
-b if (number % 2 == 0)
-break;
-c if (number % 2 != 0)
-continue;
-d if (number % 2 != 0)
-break;
+
+	a if (number % 2 == 0)
+	continue;
+	b if (number % 2 == 0)
+	break;
+*	c if (number % 2 != 0)
+	continue;
+	d if (number % 2 != 0)
+	break;
+
 ME-Q58. What is the output of the following code? (Select 1 option.)
+
 class Op {
 public static void main(String... args) {
 int a = 0;
@@ -997,51 +1045,59 @@ System.out.println(a+b);
 }
 }
 }
-a 100
-b 101
-c 102
-d Code fails to compile.
-e No output is produced.
-ME-Q59. Given the following definitions of the interfaces Movableand Jumpable, the
-task is to declare a class Personthat inherits both of these interfaces. Which of the following code snippets will accomplish this task? (Select 2 options.)
+
+	a 100
+	b 101
+	c 102
+*	d Code fails to compile.
+	e No output is produced.
+
+ME-Q59. Given the following definitions of the interfaces Movable and Jumpable, the
+task is to declare a class Person that inherits both of these interfaces. Which of the following code snippets will accomplish this task? (Select 2 options.)
+
 interface Movable {}
 interface Jumpable {}
-a interface Movable {}
-interface Jumpable {}
-class Person implements Movable, Jumpable {}
-b interface Movable {}
-interface Jumpable {}
-class Person extends Movable, Jumpable {}
-c interface Movable {}
-interface Jumpable {}
-class Person implements Movable extends Jumpable {}
-d interface Movable {}
-interface Jumpable implements Movable {}
-class Person implements Jumpable {}
-e interface Movable {}
-interface Jumpable extends Movable {}
-class Person implements Jumpable {}
-ME-Q60. Choose  the  option  that  meets  the  following  specification:  Create  a  wellencapsulated  class Pencil with  one  instance  variable model.  The  value  of model
+
+*	a 	interface Movable {}
+		interface Jumpable {}
+		class Person implements Movable, Jumpable {}
+	b 	interface Movable {}
+		interface Jumpable {}
+		class Person extends Movable, Jumpable {}
+	c 	interface Movable {}
+		interface Jumpable {}
+		class Person implements Movable extends Jumpable {}
+	d 	interface Movable {}
+		interface Jumpable implements Movable {}
+		class Person implements Jumpable {}
+*	e 	interface Movable {}
+		interface Jumpable extends Movable {}
+		class Person implements Jumpable {}
+
+ME-Q60. Choose  the  option  that  meets  the  following  specification:  Create  a  well encapsulated  class Pencil with  one  instance  variable model.  The  value  of model
 should be accessible and modifiable outside Pencil. (Select 1 option.)
-a class Pencil {
-public String model;
-}
-b class Pencil {
-public String model;
-public String getModel() { return model; }
-public void setModel(String val) { model = val; }
-}
-c class Pencil {
-private String model;
-public String getModel() { return model; }
-public void setModel(String val) { model = val; }
-}
-d class Pencil {
-public String model;
-private String getModel() { return model; }
-private void setModel(String val) { model = val; }
-}
+
+	a 	class Pencil {
+		public String model;
+		}
+	b 	class Pencil {
+		public String model;
+		public String getModel() { return model; }
+		public void setModel(String val) { model = val; }
+		}
+*	c 	class Pencil {
+		private String model;
+		public String getModel() { return model; }
+		public void setModel(String val) { model = val; }
+		}
+	d 	class Pencil {
+		public String model;
+		private String getModel() { return model; }
+		private void setModel(String val) { model = val; }
+		}
+
 ME-Q61. What is the output of the following code? (Select 1 option.)
+
 class Phone {
 void call() {
 System.out.println("Call-Phone");
@@ -1060,24 +1116,29 @@ phone.call();
 smartPhone.call();
 }
 }
-a Call-Phone
-Call-Phone
-b Call-Phone
-Call-SmartPhone
-c Call-Phone
-null
-d null
-Call-SmartPhone
-ME-Q62. Given  the  following  requirements,  choose  the  best  looping  construct  to
-implement them (choose 1 option):
+
+	a 	Call-Phone
+		Call-Phone
+*	b 	Call-Phone
+		Call-SmartPhone
+	c 	Call-Phone
+		null
+	d 	null
+		Call-SmartPhone
+
+ME-Q62. Given  the  following  requirements,  choose  the  best  looping  construct  to implement them (choose 1 option):
+
 Step 1: Meet the director of Oracle. 
 Step 2: Schedule another meeting with the director. 
 Step 3: Repeat steps 1 and 2, as long as more meetings are required.
-a forloop
-b enhanced forloop
-c do-whileloop
-d  whileloop
+
+	a for loop
+	b enhanced for loop
+*	c do-while loop
+	d while loop
+
 ME-Q63. What is the output of the following code? (Select 1 option.)
+
 class Phone {
 String keyboard = "in-built";
 }
@@ -1090,12 +1151,15 @@ Phone phone = new Tablet();
 System.out.println(phone.keyboard + ":" + phone.playMovie);
 }
 }
-a in-built:false
-b in-built:true
-c null:false
-d null:true
-e Compilation error
+
+	a in-built:false
+	b in-built:true
+	c null:false
+	d null:true
+*	e Compilation error
+
 ME-Q64. What is the output of the following code? (Select 1 option.)
+
 public class Wall {
 public static void main(String args[]) {
 double area = 10.98;
@@ -1107,11 +1171,14 @@ color = "blue";
 System.out.println(color);
 }
 }
-a red
-b blue
-c No output
-d Compilation error
+
+	a red
+	b blue
+	c No output
+*	d Compilation error
+
 ME-Q65. What is the output of the following code? (Select 1 option.)
+
 class Diary {
 int pageCount = 100;
 int getPageCount() {
@@ -1128,37 +1195,50 @@ new Diary().setPageCount(200);
 System.out.println(new Diary().getPageCount());
 }
 }
-a 100
-200
-b 100
-100
-c 200
-200
-d Code fails to compile.
+
+	a 100
+	200
+*	b 100
+	100
+	c 200
+	200
+	d Code fails to compile.
+
 ME-Q66. How many times do you think you can shop with the following code (that is,
 what’s the output of the following code)? (Select 1 option.)
+
 class Shopping {
 public static void main(String args[]) {
 boolean bankrupt = true;
-do System.out.println("enjoying shopping"); bankrupt = false;
+do 
+System.out.println("enjoying shopping"); 
+bankrupt = false;
 while (!bankrupt);
 }
 }
-a The code prints enjoying shoppingonce.
-b The code prints enjoying shoppingtwice.
-c The code prints enjoying shoppingin an infinite loop.
-d The code fails to compile.
+
+	a The code prints enjoying shopping once.
+	b The code prints enjoying shopping twice.
+	c The code prints enjoying shopping in an infinite loop.
+*	d The code fails to compile.
+
 ME-Q67. Which  of  the  following  options  are  valid  for  defining  multidimensional
 arrays? (Choose 4 options.)
-a String ejg1[][] = new String[1][2];
-b String ejg2[][] = new String[][] { {}, {} };
-c String ejg3[][] = new String[2][2];
-d String ejg4[][] = new String[][]{{null},new String[]{"a","b","c"},
-{new String()}};
-e String ejg5[][] = new String[][2];
-f String ejg6[][] = new String[][]{"A", "B"};
-g String ejg7[][] = new String[]{{"A"}, {"B"}};
+
+*	a String ejg1[][] = new String[1][2];
+*	b String ejg2[][] = new String[][] { {}, {} };
+*	c String ejg3[][] = new String[2][2];
+*	d String ejg4[][] = new String[][]{
+	{null},
+	new String[]{"a","b","c"},
+	{new String()}
+	};
+	e String ejg5[][] = new String[][2];
+	f String ejg6[][] = new String[][]{"A", "B"};
+	g String ejg7[][] = new String[]{{"A"}, {"B"}};
+
 ME-Q68. What is the output of the following code? (Select 1 option.)
+
 class Laptop {
 String memory = "1GB";
 }
@@ -1173,31 +1253,37 @@ laptop = new Laptop();
 laptop.memory = "2GB";
 }
 }
-a 1 GB
-b 2 GB
-c Compilation error
-d Runtime exception
+
+*	a 1 GB
+	b 2 GB
+	c Compilation error
+	d Runtime exception
+
 ME-Q69. Given the following code, which option, if used to replace /* INSERT CODE
-HERE */, will enable a reference variable of type Roamableto refer to an object of the
-Phoneclass? (Select 1 option.)
+HERE */, will enable a reference variable of type Roamable to refer to an object of the
+Phone class? (Select 1 option.)
+
 interface Roamable{}
 class Phone {}
 class Tablet extends Phone implements Roamable {
 //INSERT CODE HERE
 }
-a Roamable var = new Phone();
-b Roamable var = (Roamable)Phone();
-c Roamable var = (Roamable)new Phone();
-d Because  the  interface Roamable and  the  class  Phone are  unrelated,  a  reference variable of type Roamablecan’t refer to an object of class Phone.
-ME-Q70. Which of the following statements are incorrect about the mainmethod used
+
+	a Roamable var = new Phone();
+	b Roamable var = (Roamable)Phone();
+	c Roamable var = (Roamable)new Phone();
+*	d Because  the  interface Roamable and  the  class  Phone are  unrelated,  a  reference variable of type Roamable can’t refer to an object of class Phone.
+
+ME-Q70. Which of the following statements are incorrect about the main method used
 to start a Java application? (Select 2 options.)
-a A class can’t define multiple mainmethods.
-b More than one class in an application can define the mainmethod.
-c The mainmethod may accept a String, a Stringarray, or varargs (String...
-arg) as a method argument.
-d The mainmethod shouldn’t define an object of the class in which the main
-method itself is defined.
+
+	a A class can’t define multiple main methods.
+*	b More than one class in an application can define the main method.
+	c The main method may accept a String, a Strin garray, or varargs (String... arg) as a method argument.
+*	d The main method shouldn’t define an object of the class in which the main method itself is defined.
+
 ME-Q71. What is the output of the following code? (Select 1 option.)
+
 class Paper {
 Paper() {
 this(10);
@@ -1211,14 +1297,16 @@ public static void main(String[] args) {
 Paper paper = new PostIt();
 }
 }
-a Paper:1
-b Paper:0
-c Paper:0
-Paper:1
-d Paper:1
-Paper:0
-ME-Q72. Examine  the  following  code  and  select  the  correct  statement  (choose
-1 option):
+
+	a Paper:1
+	b Paper:0
+	c Paper:0
+	  Paper:1
+*	d Paper:1
+	  Paper:0
+
+ME-Q72. Examine  the  following  code  and  select  the  correct  statement  (choose 1 option):
+
 line1> class StringBuilders {
 line2> public static void main(String... args) {
 line3> StringBuilder sb1 = new StringBuilder("eLion");
@@ -1228,30 +1316,32 @@ sb1.indexOf("X"));
 line6> System.out.println(ejg);
 line7> }
 line8> }
-a The code will print LionX.
-b The code will print Lion.
-c The code will print Lionif line 5 is changed to the following:
-ejg = sb1.append("X").substring(sb1.indexOf('L'), sb1.indexOf('X'));
-d The code will compile correctly if line 4 is changed to the following:
-StringBuilder ejg = null;
+
+	a The code will print LionX.
+	b The code will print Lion.
+*	c The code will print Lion if line 5 is changed to the following: 
+	ejg = sb1.append("X").substring(sb1.indexOf('L'), sb1.indexOf('X'));
+	d The code will compile correctly if line 4 is changed to the following:
+	StringBuilder ejg = null;
+
 ME-Q73. When considered individually, which of the options is correct for the following code? (Select 1 option.)
+
 interface Jumpable { void jump(); }
 class Chair implements Jumpable {
 public void jump() {
 System.out.println("Chair cannot jump");
 }
 }
-a The  class Chair can’t  implement  the  interface Jumpable because  a Chair
-can’t define a method jump.
-b If the name of the interface is changed to Movableand the definition of class
-Chairis updated to class Chair implements Movable, class Chairwill compile successfully.
-c If the definition of the method jumpis removed from the definition of the
-class Chair, it will compile successfully.
-d If the name of the method jumpis changed to runin the interface Jumpable,
-the class Chairwill compile successfully.
+
+	a The  class Chair can’t  implement  the  interface Jumpable because  a Chair can’t define a method jump.
+*	b If the name of the interface is changed to Movable and the definition of class Chair is updated to class Chair implements Movable, class Chair will compile successfully.
+	c If the definition of the method jump is removed from the definition of the class Chair, it will compile successfully.
+	d If the name of the method jump is changed to runin the interface Jumpable, the class Chair will compile successfully.
+
 ME-Q74. Given the following code, which option, if used to replace /* INSERT CODE
 HERE */,  will  enable  the  class Jungle to  determine  whether  the  reference  variable
-animalrefers to an object of the class Lionand print 1? (Select 1 option.)
+animal refers to an object of the class Lion and print 1? (Select 1 option.)
+
 class Animal{ float age; }
 class Lion extends Animal { int claws;}
 class Jungle {
@@ -1261,11 +1351,14 @@ Animal animal = new Lion();
 System.out.println(1);
 }
 }
-a if (animal instanceof Lion)
-b if (animal instanceOf Lion)
-c if (animal == Lion)
-d if (animal = Lion)
+
+*	a if (animal instanceof Lion)
+	b if (animal instanceOf Lion)
+	c if (animal == Lion)
+	d if (animal = Lion)
+
 ME-Q75. Given that the file Test.java, which defines the following code, fails to compile, select the reasons for the compilation failure (choose 2 options):
+
 class Person {
 Person(String value) {}
 }
@@ -1275,35 +1368,40 @@ public static void main(String args[]) {
 Employee e = new Employee();
 }
 }
-a The class Personfails to compile.
-b The class Employeefails to compile.
-c The default constructor can call only a no-argument constructor of a base class.
-d Code  that  creates  an  object  of  class Employee in  class Test didn’t  pass  a
-Stringvalue to the constructor of class Employee.
+
+	a The class Person fails to compile.
+	b The class Employee fails to compile.
+*	c The default constructor can call only a no-argument constructor of a base class.
+	d Code  that  creates  an  object  of  class Employee in  class Test didn’t  pass  a
+	String value to the constructor of class Employee.
+
 ME-Q76. Select the correct statements. (Choose 4 options.)
-a Checked exceptions are subclasses of java.lang.Throwable.
-b Runtime exceptions are subclasses of java.lang.Exception.
-c Errors are subclasses of java.lang.Throwable. 
-d java.lang.Throwableis a subclass of java.lang.Exception.
-e java.lang.Exceptionis a subclass of java.lang.Error.
-f Errors aren’t subclasses of java.lang.Exception.
-g java.lang.Throwableis a subclass of java.lang.Error.
-h Checked exceptions are subclasses of java.lang.CheckedException.
-ME-Q77. Examine  the  following  code  and  select  the  correct  statements  (choose
-2options):
+
+*	a Checked exceptions are subclasses of java.lang.Throwable.
+*	b Runtime exceptions are subclasses of java.lang.Exception.
+*	c Errors are subclasses of java.lang.Throwable. 
+	d java.lang.Throwable is a subclass of java.lang.Exception.
+	e java.lang.Exception is a subclass of java.lang.Error.
+*	f Errors aren’t subclasses of java.lang.Exception.
+	g java.lang.Throwable is a subclass of java.lang.Error.
+	h Checked exceptions are subclasses of java.lang.CheckedException.
+
+ME-Q77. Examine  the  following  code  and  select  the  correct  statements  (choose 2 options):
+
 class Bottle {
 void Bottle() {}
 void Bottle(WaterBottle w) {}
 }
 class WaterBottle extends Bottle {}
-a A  base  class  can’t  pass  reference  variables  of  its  defined  class  as  method
-parameters in constructors.
-b The class compiles successfully—a base class can use reference variables of its
-derived class as method parameters.
-c The class Bottledefines two overloaded constructors.
-d The class Bottlecan access only one constructor.
+
+	a A  base  class  can’t  pass  reference  variables  of  its  defined  class  as  method parameters in constructors.
+*	b The class compiles successfully—a base class can use reference variables of its derived class as method parameters.
+	c The class Bottle defines two overloaded constructors.
+*	d The class Bottle can access only one constructor.
+
 ME-Q78. Given the following code, which option, if used to replace /* INSERT CODE
 HERE */, will cause the code to print 110? (Select 1 option.)
+
 class Book {
 private int pages = 100;
 }
@@ -1314,12 +1412,15 @@ public static void main(String[] args) {
 System.out.println(new Magazine().totalPages());
 }
 }
-a return super.pages + this.interviews*5;
-b return this.pages + this.interviews*5;
-c return super.pages + interviews*5;
-d return pages + this.interviews*5;
-e None of the above
-ME-Q79. Given that the method writehas been defined as follows,
+
+	a return super.pages + this.interviews*5;
+	b return this.pages + this.interviews*5;
+	c return super.pages + interviews*5;
+	d return pages + this.interviews*5;
+*	e None of the above
+
+ME-Q79. Given that the method write has been defined as follows,
+
 class NoInkException extends Exception {}
 class Pen{
 void write(String val) throws NoInkException {
@@ -1329,25 +1430,29 @@ void article() {
 //INSERT CODE HERE
 }
 }
+
 which of the following options, when inserted at //INSERT CODE HERE, will define valid
-use of the method writein the method article? (Select 2 options.)
-a try {
-new Pen().write("story");
-}
-catch (NoInkException e) {} 
-b try {
-new Pen().write("story");
-}
-finally {}
-c try {
-write("story");
-}
-catch (Exception e) {}
-d try {
-new Pen().write("story");
-}
-catch (RuntimeException e) {}
+use of the method write in the method article? (Select 2 options.)
+
+*	a 	try {
+		new Pen().write("story");
+		}
+		catch (NoInkException e) {} 
+*	b 	try {
+		new Pen().write("story");
+		}
+		finally {}
+	c 	try {
+		write("story");
+		}
+		catch (Exception e) {}
+	d 	try {
+		new Pen().write("story");
+		}
+		catch (RuntimeException e) {}
+
 ME-Q80. What is the output of the following code? (Select 1 option.)
+
 class EMyMethods {
 static String name = "m1";
 void riverRafting() {
@@ -1362,11 +1467,14 @@ EMyMethods m1 = new EMyMethods();
 m1.riverRafting();
 }
 }
-a m1
-b m2
-c m3
-d Code fails to compile.
+
+	a m1
+	b m2
+	c m3
+*	d Code fails to compile.
+
 ME-Q81. What is the output of the following code? (Select 1 option.)
+
 class EBowl {
 public static void main(String args[]) {
 String eFood = "Corn";
@@ -1379,15 +1487,18 @@ foodIn.concat("A");
 foodIn.replace('C', 'B');
 }
 }
-a Corn
-BornA
-b Corn
-CornA
-c Corn
-Born
-d Corn
-Corn
+
+*	a 	Corn
+		BornA
+	b 	Corn
+		CornA
+	c 	Corn
+		Born
+	d 	Corn
+		Corn
+
 ME-Q82. Which statement is true for the following code? (Select 1 option.)
+
 class SwJava {
 public static void main(String args[]) {
 String[] shapes = {"Circle", "Square", "Triangle"};
@@ -1398,28 +1509,31 @@ case "Circle": System.out.println("Triangle"); break;
 }
 }
 }
-a The code prints Circle.
-b The code prints Square.
-c The code prints Triangle.
-d The code prints
-Circle
-Square
-Triangle
-e The code prints 
-Triangle
-Circle
-Square
-f The code fails to compile.
+
+	a 	The code prints Circle.
+	b 	The code prints Square.
+	c 	The code prints Triangle.
+	d 	The code prints
+		Circle
+		Square
+		Triangle
+	e 	The code prints 
+		Triangle
+		Circle
+		Square
+*	f 	The code fails to compile.
+
 ME-Q83. Which of the following options include the ideal conditions for choosing to
-use a do-whileloop over a whileloop? (Select 2 options.)
-a Repeatedly display a menu to a user and accept input until the user chooses
-to exit the application.
-b Repeatedly allow a student to sit in the exam only if she carries her identity card.
-c Repeatedly serve food to a person until he wants no more.
-d Repeatedly allow each passenger to board an airplane if the passengers have
-their boarding passes.
+use a do-while loop over a while loop? (Select 2 options.)
+
+*	a Repeatedly display a menu to a user and accept input until the user chooses to exit the application.
+	b Repeatedly allow a student to sit in the exam only if she carries her identity card.
+*	c Repeatedly serve food to a person until he wants no more.
+	d Repeatedly allow each passenger to board an airplane if the passengers have their boarding passes.
+
 ME-Q84. Given  the  following  definition  of  the  classes Person, Father,  and Home,
 which options, if used to replace /* INSERT CODE HERE */, will cause the code to compile successfully (select 3 options):
+
 class Person {}
 class Father extends Person {
 public void dance() throws ClassCastException {}
@@ -1433,24 +1547,27 @@ try {
 //INSERT CODE HERE
 }
 }
-a catch (NullPointerException e) {}
-catch (ClassCastException e) {}
-catch (Exception e) {}
-catch (Throwable t) {}
-b catch (ClassCastException e) {}
-catch (NullPointerException e) {}
-catch (Exception e) {}
-catch (Throwable t) {}
-c catch (ClassCastException e) {}
-catch (Exception e) {}
-catch (NullPointerException e) {}
-catch (Throwable t) {}
-d catch (Throwable t) {}
-catch (Exception e) {}
-catch (ClassCastException e) {}
-catch (NullPointerException e) {}
-e finally {}
+
+*	a 	catch (NullPointerException e) {}
+		catch (ClassCastException e) {}
+		catch (Exception e) {}
+		catch (Throwable t) {}
+*	b	catch (ClassCastException e) {}
+		catch (NullPointerException e) {}
+		catch (Exception e) {}
+		catch (Throwable t) {}
+	c 	catch (ClassCastException e) {}
+		catch (Exception e) {}
+		catch (NullPointerException e) {}
+		catch (Throwable t) {}
+	d 	catch (Throwable t) {}
+		catch (Exception e) {}
+		catch (ClassCastException e) {}
+		catch (NullPointerException e) {}
+*	e 	finally {}
+
 ME-Q85. What is the output of the following code? (Select 1 option.)
+
 class Camera {
 public static void main(String args[]) {
 String settings;
@@ -1460,11 +1577,14 @@ settings = "Adjust settings manually";
 System.out.println("Camera:" + settings);
 }
 }
-a The code prints Camera:null.
-b The code prints Camera:Adjust settings manually.
-c The code will print Camera:.
-d The code will fail to compile.
+
+	a The code prints Camera:null.
+	b The code prints Camera:Adjust settings manually.
+	c The code will print Camera:.
+*	d The code will fail to compile.
+
 ME-Q86. The output of the class TestEJavaCourse, defined as follows, is 300:
+
 class Course {
 int enrollments;
 }
@@ -1477,13 +1597,16 @@ c2.enrollments = 200;
 System.out.println(c1.enrollments + c2.enrollments);
 }
 }
-What will happen if the variable enrollmentsis defined as a staticvariable? (Select
-1option.)
-a No change in output. TestEJavaCourseprints 300.
-b Change in output. TestEJavaCourseprints 200.
-c Change in output. TestEJavaCourseprints 400.
-d The class TestEJavaCoursefails to compile.
+
+What will happen if the variable enrollments is defined as a static variable? (Select 1 option.)
+
+	a No change in output. TestEJavaCourse prints 300.
+	b Change in output. TestEJavaCourse prints 200.
+*	c Change in output. TestEJavaCourse prints 400.
+	d The class TestEJavaCoursefails to compile.
+
 ME-Q87. What is the output of the following code? (Select 1 option.)
+
 String ejgStr[] = new String[][]{{null},new String[]{"a","b","c"},{new 
 String()}}[0] ;
 String ejgStr1[] = null;
@@ -1491,17 +1614,19 @@ String ejgStr2[] = {null};
 System.out.println(ejgStr[0]);
 System.out.println(ejgStr2[0]);
 System.out.println(ejgStr1[0]);
-a null
-NullPointerException
-b null
-null
-NullPointerException
-c NullPointerException
-d null
-null
-null
-ME-Q88. Examine  the  following  code  and  select  the  correct  statement  (choose
-1 option):
+
+	a 	null
+		NullPointerException
+	b 	null
+		null
+		NullPointerException
+*	c 	NullPointerException
+	d 	null
+		null
+		null
+
+ME-Q88. Examine  the  following  code  and  select  the  correct  statement  (choose 1 option):
+
 import java.util.*;
 class Person {}
 class Emp extends Person {}
@@ -1514,28 +1639,32 @@ list.add(new Emp()); //LINE3
 list.add(new String[]{"abcd", "xyz"});//LINE4
 }
 }
-a The code on line 1 won’t compile.
-b The code on line 2 won’t compile.
-c The code on line 3 won’t compile.
-d The code on line 4 won’t compile.
-e None of the above.
+
+	a The code on line 1 won’t compile.
+	b The code on line 2 won’t compile.
+	c The code on line 3 won’t compile.
+	d The code on line 4 won’t compile.
+*	e None of the above.
+
 ME-Q89. What is the output of the following code? (Select 1 option.)
+
 public class If2 {
 public static void main(String args[]) {
 int a = 10; int b = 20; boolean c = false;
 if (b > a) if (++a == 10) if (c!=true) System.out.println(1);
 else System.out.println(2); else System.out.println(3);
 }
+
 }
-a 1
-b 2
-c 3
-d No output
+
+	a 1
+*	b 2
+	c 3
+	d No output
+
 ME-Q90. Select the incorrect statement (choose 1 option):
-a An  enhanced for loop  can  be  used  to  iterate  through  the  elements  of  an
-array and ArrayList.
-b The loop counter of an enhanced forloop can be used to modify the current
-element of the array being iterated over.
-c do-whileand whileloops can be used to iterate through the elements of an
-array and ArrayList. 
-d The loop counter of a regular forloop can be used to modify the current element of an ArrayListbeing iterated over
+
+	a An  enhanced for loop  can  be  used  to  iterate  through  the  elements  of  an array and ArrayList.
+*	b The loop counter of an enhanced for loop can be used to modify the current element of the array being iterated over.
+	c do-while and while loops can be used to iterate through the elements of an array and ArrayList. 
+	d The loop counter of a regular for loop can be used to modify the current element of an ArrayList being iterated over
