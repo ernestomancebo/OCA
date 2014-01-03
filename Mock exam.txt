@@ -37,6 +37,7 @@ System.out.println(1);
 *	c ArrayIndexOutOfBoundsException e
 	d ArrayOutOfBoundsException e
 
+&
 ME-Q4.What is the output of the following code? (Select 1 option.)
 
 int a = 10; String name = null;
@@ -52,10 +53,11 @@ System.out.println(a);
 	a 5
 	b 6
 	c 10
-	d 11
+-	d 11
 	e 12
 *	f Runtime exception
 
+&
 ME-Q5. Given the following class definition,
 
 class Student { int marks = 10; }
@@ -76,7 +78,7 @@ case 98: System.out.println("98");
 	a 100
 	10
 	98
-	b 10
+-	b 10
 	98
 	c 100
 *	d 10
@@ -312,6 +314,7 @@ System.out.println(model + price);
 	d 0.0
 *	e Compilation error
 
+&
 ME-Q19. What is the output of the following code? (Select 1 option.)
 
 public class Sales {
@@ -323,9 +326,10 @@ System.out.println(salesPhone++ + ++salesPhone + ++salesPhone);
 
 	a 5
 	b 6
-	c 8
+-	c 8
 *	d 9
 
+&
 ME-Q20. Which of the following options defines the correct structure of a Java class?
 (Select 1 option.)
 
@@ -339,7 +343,7 @@ ME-Q20. Which of the following options defines the correct structure of a Java c
 	c 	class MyClass {
 		import com.ejava.guru.*;
 		}
-	d 	class MyClass {
+-	d 	class MyClass {
 		int abc;
 		}
 
@@ -414,18 +418,19 @@ two String arguments and an int argument and doesn’t return any value? (Select
 	d void myMethod(String val1, val2, int val3)
 *	e void myMethod(int str2, String str3, String str1)
 
+&
 ME-Q25. Which of the following will compile successfully? (Select 3 options.)
 
 *	a int eArr1[] = {10, 23, 10, 2};
 *	b int[] eArr2 = new int[10];
-	c int[] eArr3 = new int[] {};
+-	c int[] eArr3 = new int[] {};
 	d int[] eArr4 = new int[10] {};
-*	e int eArr5[] = new int[2] {10, 20};
+-*	e int eArr5[] = new int[2] {10, 20};
 
-ME-Q26. Assume that Oracle has asked you to create a method that returns the concatenated value of two String objects. Which of the following methods do you think
-can accomplish this job? (Select 2 options.)
+&
+ME-Q26. Assume that Oracle has asked you to create a method that returns the concatenated value of two String objects. Which of the following methods do you think can accomplish this job? (Select 2 options.)
 
-*	a 	public String add(String 1, String 2) {
+-*	a 	public String add(String 1, String 2) {
 		return str1 + str2;
 		}
 *	b 	private String add(String s1, String s2) {
@@ -434,12 +439,11 @@ can accomplish this job? (Select 2 options.)
 	c 	protected String add(String value1, String value2) {
 		return value2.append(value2);
 		}
-	d 	String subtract(String first, String second) {
+-	d 	String subtract(String first, String second) {
 		return first.concat(second.substring(0));
 		}
 
-ME-Q27. In Java, the class String is defined in the package java.lang, and this package is automatically imported in all the Java classes. Given this statement, which of the
-following options represents the correct definition of class EJava, which can define a variable of class String? (Choose 2 options.)
+ME-Q27. In Java, the class String is defined in the package java.lang, and this package is automatically imported in all the Java classes. Given this statement, which of the following options represents the correct definition of class EJava, which can define a variable of class String? (Choose 2 options.)
 
 	a 	import java.lang;
 		class EJava {
@@ -503,14 +507,15 @@ System.out.println(ctr);
 	c break;
 	d end;
 
+&
 ME-Q31. Ideally,  which  of  the  following  should  never  be  handled  by  an  exception handler? (Select 2 options.)
 
-	a StackOverflowError
+-	a StackOverflowError
 *	b OutOfMemoryError
 	c ArrayIndexOutOfBoundError
 	d ClassLoadingException
 	e CompilationError
-*	f OutOfStorageError
+-*	f OutOfStorageError
 
 ME-Q32. What is the output of the following code? (Select 1 option.)
 
@@ -637,6 +642,7 @@ interface Movable {}
 *	c class Emp extends Person implements Movable{}
 	d class Emp extends Person, Movable{}
 
+&
 ME-Q38. What is the output of the following code? (Select 1 option.)
 
 class Phone {
@@ -658,7 +664,7 @@ smartPhone.call();
 }
 }
 
-	a 	Call-Phone
+-	a 	Call-Phone
 		Call-Phone
 *	b 	Call-Phone
 		Call-SmartPhone
@@ -769,10 +775,10 @@ System.out.println(model);
 }
 }
 
-*	a landline
+	a landline
 	b Smartphone
 	c No output
-	d Compilation error
+*	d Compilation error
 
 ME-Q44. What is the output of the following code? (Select 1 option.)
 
@@ -790,6 +796,7 @@ System.out.println(eVal.substring(eVal.indexOf("2"),eVal.indexOf("0")).concat("0
 	e Compilation error
 *	f Runtime exception
 
+&
 ME-Q45. Examine  the  following  code  and  select  the  correct  statements  (choose 2 options):
 
 class Artist {
@@ -805,11 +812,11 @@ a2 = null; // Line 1
 // Line 2
 }
 
-*	a At least two objects are garbage collected on line 1.
-	b At least one object is garbage collected on line 1.
-*	c No objects are garbage collected on line 1.
-	d The number of objects that are garbage collected on line 1 is unknown.
-	e At least two objects are eligible for garbage collection on line 2.
+	a At least two objects are garbage collected on line 1.
+-*	b At least one object is garbage collected on line 1.
+-*	c No objects are garbage collected on line 1.
+-	d The number of objects that are garbage collected on line 1 is unknown.
+-	e At least two objects are eligible for garbage collection on line 2.
 
 ME-Q46. What is the output of the following code? (Select 1 option.)
 
@@ -834,13 +841,15 @@ System.out.print(b1 == b2);
 *	d false:false
 	e Compilation error—there is no equals method in the class Book.
 
+&
 ME-Q47. Which of the following statements are correct? (Select 2 options.)
 
 *	a StringBuilder sb1 = new StringBuilder() will create a StringBuilderobject with no characters, but with an initial capacity to store 16 chars.
 	b StringBuilder sb1 = new StringBuilder(5*10) will create a StringBuilder object with a value 50.
-*	c Unlike the class String, the concat method in StringBuilder modifies the	value of a StringBuilder object.
-	d The insert method can be used to insert a character, number, or String at	the start or end or at a specified position of a StringBuilder object.
+-*	c Unlike the class String, the concat method in StringBuilder modifies the	value of a StringBuilder object.
+-	d The insert method can be used to insert a character, number, or String at	the start or end or at a specified position of a StringBuilder object.
 
+&
 ME-Q48. Given the following definition of the class Animal and the interface Jump,
 select the correct array declarations and initialization (choose 3 options):
 
@@ -848,11 +857,12 @@ interface Jump {}
 class Animal implements Jump {}
 
 *	a Jump eJump1[] = {null, new Animal()};
-*	b Jump[] eJump2 = new Animal()[22];
-	c Jump[] eJump3 = new Jump[10];
+-*	b Jump[] eJump2 = new Animal()[22];
+-	c Jump[] eJump3 = new Jump[10];
 *	d Jump[] eJump4 = new Animal[87];
 	e Jump[] eJump5 = new Jump()[12];
 
+&
 ME-Q49. What is the output of the following code? (Select 1 option.)
 
 import java.util.*;
@@ -867,11 +877,11 @@ System.out.print(s + ", ");
 }
 }
 
-*	a Spring, Summer, Winter,
+-*	a Spring, Summer, Winter,
 	b Spring, Autumn, Winter,
 	c Autumn, Winter,
 	d Compilation error
-	e Runtime exception
+-	e Runtime exception
 
 ME-Q50. What is the output of the following code? (Select 1 option.)
 
@@ -1074,8 +1084,7 @@ interface Jumpable {}
 		interface Jumpable extends Movable {}
 		class Person implements Jumpable {}
 
-ME-Q60. Choose  the  option  that  meets  the  following  specification:  Create  a  well encapsulated  class Pencil with  one  instance  variable model.  The  value  of model
-should be accessible and modifiable outside Pencil. (Select 1 option.)
+ME-Q60. Choose  the  option  that  meets  the  following  specification:  Create  a  well encapsulated  class Pencil with  one  instance  variable model.  The  value  of model should be accessible and modifiable outside Pencil. (Select 1 option.)
 
 	a 	class Pencil {
 		public String model;
@@ -1158,6 +1167,7 @@ System.out.println(phone.keyboard + ":" + phone.playMovie);
 	d null:true
 *	e Compilation error
 
+&
 ME-Q64. What is the output of the following code? (Select 1 option.)
 
 public class Wall {
@@ -1173,9 +1183,9 @@ System.out.println(color);
 }
 
 	a red
-	b blue
+-	b blue
 	c No output
-*	d Compilation error
+-*	d Compilation error
 
 ME-Q65. What is the output of the following code? (Select 1 option.)
 
@@ -1259,6 +1269,7 @@ laptop.memory = "2GB";
 	c Compilation error
 	d Runtime exception
 
+&
 ME-Q69. Given the following code, which option, if used to replace /* INSERT CODE
 HERE */, will enable a reference variable of type Roamable to refer to an object of the
 Phone class? (Select 1 option.)
@@ -1271,15 +1282,16 @@ class Tablet extends Phone implements Roamable {
 
 	a Roamable var = new Phone();
 	b Roamable var = (Roamable)Phone();
-	c Roamable var = (Roamable)new Phone();
-*	d Because  the  interface Roamable and  the  class  Phone are  unrelated,  a  reference variable of type Roamable can’t refer to an object of class Phone.
+-	c Roamable var = (Roamable)new Phone();
+-*	d Because  the  interface Roamable and  the  class  Phone are  unrelated,  a  reference variable of type Roamable can’t refer to an object of class Phone.
 
+&
 ME-Q70. Which of the following statements are incorrect about the main method used
 to start a Java application? (Select 2 options.)
 
 	a A class can’t define multiple main methods.
-*	b More than one class in an application can define the main method.
-	c The main method may accept a String, a Strin garray, or varargs (String... arg) as a method argument.
+-*	b More than one class in an application can define the main method.
+-	c The main method may accept a String, a Strin garray, or varargs (String... arg) as a method argument.
 *	d The main method shouldn’t define an object of the class in which the main method itself is defined.
 
 ME-Q71. What is the output of the following code? (Select 1 option.)
@@ -1305,6 +1317,7 @@ Paper paper = new PostIt();
 *	d Paper:1
 	  Paper:0
 
+&
 ME-Q72. Examine  the  following  code  and  select  the  correct  statement  (choose 1 option):
 
 line1> class StringBuilders {
@@ -1318,8 +1331,8 @@ line7> }
 line8> }
 
 	a The code will print LionX.
-	b The code will print Lion.
-*	c The code will print Lion if line 5 is changed to the following: 
+-	b The code will print Lion.
+-*	c The code will print Lion if line 5 is changed to the following: 
 	ejg = sb1.append("X").substring(sb1.indexOf('L'), sb1.indexOf('X'));
 	d The code will compile correctly if line 4 is changed to the following:
 	StringBuilder ejg = null;
@@ -1357,6 +1370,7 @@ System.out.println(1);
 	c if (animal == Lion)
 	d if (animal = Lion)
 
+&
 ME-Q75. Given that the file Test.java, which defines the following code, fails to compile, select the reasons for the compilation failure (choose 2 options):
 
 class Person {
@@ -1370,7 +1384,7 @@ Employee e = new Employee();
 }
 
 	a The class Person fails to compile.
-	b The class Employee fails to compile.
+-	b The class Employee fails to compile.
 *	c The default constructor can call only a no-argument constructor of a base class.
 	d Code  that  creates  an  object  of  class Employee in  class Test didn’t  pass  a
 	String value to the constructor of class Employee.
@@ -1419,6 +1433,7 @@ System.out.println(new Magazine().totalPages());
 	d return pages + this.interviews*5;
 *	e None of the above
 
+&
 ME-Q79. Given that the method write has been defined as follows,
 
 class NoInkException extends Exception {}
@@ -1438,11 +1453,11 @@ use of the method write in the method article? (Select 2 options.)
 		new Pen().write("story");
 		}
 		catch (NoInkException e) {} 
-*	b 	try {
+-*	b 	try {
 		new Pen().write("story");
 		}
 		finally {}
-	c 	try {
+-	c 	try {
 		write("story");
 		}
 		catch (Exception e) {}
@@ -1473,6 +1488,7 @@ m1.riverRafting();
 	c m3
 *	d Code fails to compile.
 
+&
 ME-Q81. What is the output of the following code? (Select 1 option.)
 
 class EBowl {
@@ -1488,13 +1504,13 @@ foodIn.replace('C', 'B');
 }
 }
 
-*	a 	Corn
+-*	a 	Corn
 		BornA
 	b 	Corn
 		CornA
 	c 	Corn
 		Born
-	d 	Corn
+-	d 	Corn
 		Corn
 
 ME-Q82. Which statement is true for the following code? (Select 1 option.)
@@ -1605,6 +1621,7 @@ What will happen if the variable enrollments is defined as a static variable? (S
 *	c Change in output. TestEJavaCourse prints 400.
 	d The class TestEJavaCoursefails to compile.
 
+&
 ME-Q87. What is the output of the following code? (Select 1 option.)
 
 String ejgStr[] = new String[][]{{null},new String[]{"a","b","c"},{new 
@@ -1617,10 +1634,10 @@ System.out.println(ejgStr1[0]);
 
 	a 	null
 		NullPointerException
-	b 	null
+-	b 	null
 		null
 		NullPointerException
-*	c 	NullPointerException
+-*	c 	NullPointerException
 	d 	null
 		null
 		null
@@ -1646,6 +1663,7 @@ list.add(new String[]{"abcd", "xyz"});//LINE4
 	d The code on line 4 won’t compile.
 *	e None of the above.
 
+&
 ME-Q89. What is the output of the following code? (Select 1 option.)
 
 public class If2 {
@@ -1658,8 +1676,8 @@ else System.out.println(2); else System.out.println(3);
 }
 
 	a 1
-*	b 2
-	c 3
+-*	b 2
+-	c 3
 	d No output
 
 ME-Q90. Select the incorrect statement (choose 1 option):
