@@ -1,0 +1,35 @@
+/*
+##################################################
+Unit 1
+##################################################
+*/
+
+1.  What will be printed out if the following code is run with the java SomeClass hello world command?
+
+public class SomeClass{
+public static void main(String argv[])
+{
+System.out.println(argv[1]);
+}
+}
+
+*	a.  world
+	b.  hello
+	c.  hello world
+	d.  ArrayIndexOutOfBoundsExceptionis thrown
+
+2.  Consider the following code sequence:
+
+public class SomeClass{
+public int i;
+public static void main(String argv[]){
+SomeClass sc = new SomeClass();
+// Comment line
+}
+}
+Which of the following statements will compile without syntax or runtime errors if they replace the comment line?
+
+*	a.  sc.i = 5;
+*	b.  int j = sc.i;
+	c.  sc.i = 5.0;
+*	d.  System.out.println(sc.i);
