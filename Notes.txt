@@ -29,3 +29,5 @@ exception thrown by the staticinitialization block.
 
 Don’t  confuse  the  exception  thrown  by Class.forName(),  used  to
 load  the  class,  and NoClassDefFoundErrorthrown by the JVM. Class.forName()throws ClassNotFoundException.
+
+Narrowing -> Lose of information by casting
