@@ -35,3 +35,88 @@ Which of the following statements will compile without syntax or runtime errors 
 *	b.  int j = sc.i;
 	c.  sc.i = 5.0;
 *	d.  System.out.println(sc.i);
+
+/*
+##################################################
+Chapter 2
+##################################################
+*/
+
+1.  What will happen when you compile and run the following code?
+
+public class ScopeClass{
+private int i = 35;
+public static void main(String argv[]){
+int i = 45;
+ScopeClass s = new ScopeClass ();
+s.someMethod();
+}
+public static void someMethod(){
+System.out.println(i);
+}
+}
+
+	a.  35 will be printed out
+	b.  45 will be printed out
+*	c.  A compile time error will be generated
+	d.  An exception will be thrown 
+
+2.  Which of the following lines will compile without warning or error?
+
+	a.  char d="d";
+	b.  float f=3.1415;
+*	c.  int i=34;
+	d.  byte b=257;
+*	e.  boolean isPresent=true;
+
+3.  Given the following declaration:
+
+public class SomeClass{
+public int i;
+public static void main(String argv[]){
+SomeClass sc = new SomeClass();
+// Comment line
+}
+}
+
+Which of the following statements are correct if they replace the 
+comment line?
+
+*	a.  System.out.println(i);
+*	b.  System.out.println(sc.i);
+	c.  System.out.println(SomeClass.i);
+*	d.  System.out.println((new SomeClass()).i);
+
+4.  Given the following declaration:
+
+StringBuilder sb = new StringBuilder;
+
+Which of the following are valid uses of the sb variable?
+
+*	a.  sb.append(34.5);
+	b.  sb.deleteCharAt(34.5);
+	c.  sb.toInteger(3);
+*	d.  sb.toString();
+
+5.  Which of the following will return the position of the first letter 'a' where the 
+string s contains "banana"?
+
+	a.  lastIndexOf(2,s);
+*	b.  s.indexOf('a');
+	c.  s.charAt(2);
+	d.  indexOf(s,'v');
+
+6.  Given the following code, which expression displays the word "Equal"?
+
+String s1="Java";
+String s2="java";
+if(expression) {
+System.out.println("Equal");
+} else {
+System.out.println("Not equal");
+}
+
+	a.  s1==s2
+	b.  s1.matchCase(s2)
+*	c.  s1.equalsIgnoreCase(s2)
+	d.  s1.equals(s2)

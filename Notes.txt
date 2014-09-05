@@ -31,3 +31,4 @@ Don’t  confuse  the  exception  thrown  by Class.forName(),  used  to
 load  the  class,  and NoClassDefFoundErrorthrown by the JVM. Class.forName()throws ClassNotFoundException.
 
 Narrowing -> Lose of information by casting
+Empty statement -> consists of a single semicolon. When executed, it does nothing. It is commonly used as a place holder indicating that nothing is to be done
