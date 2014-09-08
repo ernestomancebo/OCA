@@ -32,3 +32,9 @@ load  the  class,  and NoClassDefFoundErrorthrown by the JVM. Class.forName()thr
 
 Narrowing -> Lose of information by casting
 Empty statement -> consists of a single semicolon. When executed, it does nothing. It is commonly used as a place holder indicating that nothing is to be done
+
+INTEGER DATA TYPES -> include byte, char, short, and int. Any of these data types can be used with an integer switch statement. The data type longis not allowed
+
+BigDecimal provides better accuracy for decimal points.
+
+By using the strictfpkeyword, all calculations will strictly abide by the IEEE standard
