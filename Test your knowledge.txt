@@ -120,3 +120,63 @@ System.out.println("Not equal");
 	b.  s1.matchCase(s2)
 *	c.  s1.equalsIgnoreCase(s2)
 	d.  s1.equals(s2)
+
+/*
+##################################################
+Chapter 3
+##################################################
+*/
+
+1.	 What is the result of the following operation?
+System.out.println(4 % 3);
+
+	a.	 0
+*	b.	 1
+	c.	 2
+	d.	 3
+
+2.	 Which of the following expressions will evaluate to 7?
+
+*	a.	 2 + 4 * 3- 7
+	b.	 (2 + 4) * (3 - 7)
+	c.	 2 + (4 * 3) - 7
+	d.	 ((2 + 4) * 3) - 7)
+
+3.	 What is the output of the following statement?
+System.out.println( 16 >>> 3);
+
+	a.	 1
+	b.	 2
+	c.	 4
+	d.	 8
+
+4.	 Given the following declarations, which of the following if statements will
+compile without errors?
+
+int i = 3;
+int j = 3;
+int k = 3;
+
+*	a.	 if(i > j) {}
+	b.	 if(i > j > k) {}
+*	c.	 if(i > j && i > k) {}
+	d.	 if(i > j && > k) {}
+
+5.	 What will be printed out when the following code is executed?
+
+switch (5) {
+case 0:
+System.out.println("zero");
+break;
+case 1:
+System.out.println("one");
+default:
+System.out.println("default");
+case 2:
+System.out.println("two");
+}
+
+	a.	 one
+*	b.	 default and two
+	c.	 one, two, and default
+	d.	 Nothing, a compile-time error is generated
