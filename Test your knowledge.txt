@@ -146,9 +146,12 @@ System.out.println(4 % 3);
 System.out.println( 16 >>> 3);
 
 	a.	 1
-	b.	 2
+*	b.	 2
 	c.	 4
 	d.	 8
+
+1 0000
+0 0010
 
 4.	 Given the following declarations, which of the following if statements will
 compile without errors?
