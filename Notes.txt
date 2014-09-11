@@ -38,3 +38,12 @@ INTEGER DATA TYPES -> include byte, char, short, and int. Any of these data type
 BigDecimal provides better accuracy for decimal points.
 
 By using the strictfpkeyword, all calculations will strictly abide by the IEEE standard
+
+Java does not support two-dimensional arrays in the strictest sense. In reality they are arrays of arrays.
+
+RAGGED ARRAYS -> the rows do not necessarily have to be the same size.
+
+To compare two arrays correctly we need to use the Arraysclass' equals or deepEqualsmethods.
+
+Shallow copy: Refers to when only the reference values are copied. After the copy operation, the original object has not been duplicated.
+In a deep copy, the reference to the object is not copied. Instead, a new copy of the object is created.
