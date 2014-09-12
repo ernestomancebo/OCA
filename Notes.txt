@@ -47,3 +47,11 @@ To compare two arrays correctly we need to use the Arraysclass' equals or deepEq
 
 Shallow copy: Refers to when only the reference values are copied. After the copy operation, the original object has not been duplicated.
 In a deep copy, the reference to the object is not copied. Instead, a new copy of the object is created.
+
+Comparator Object??
+
+While ArrayListis a powerful class, arrays should still be used if:
+•  There is a known number of elements
+•  It has a small fixed upper bound
+•  Primitive data types are needed for efficiency
+•  No elements need to be inserted

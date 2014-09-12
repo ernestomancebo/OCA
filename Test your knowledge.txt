@@ -183,3 +183,37 @@ System.out.println("two");
 *	b.	 default and two
 	c.	 one, two, and default
 	d.	 Nothing, a compile-time error is generated
+
+/*
+##################################################
+Chapter 4
+##################################################
+*/
+
+1.  Which of the following statements will compile without an error?
+
+*	a.  int arr[];
+	b.  int arr[5];
+	c.  int arr[5] = {1,2,3,4,5};
+*	d.  int arr[] = {1,2,3,4,5};
+
+2.  Which of the following declares an array that supports two rows and a 
+variable number of columns?
+
+	a.  int arr[][] = new int[2][3];
+*	b.  int arr[][] = new int[2][];
+	c.  int arr[][] = new int[][];
+	d.  int arr[][] = new int[][3];
+
+3.  Given the following code, which of the following statements can be used to 
+determine if cat can be found in the list?
+
+ArrayList<String> list = new ArrayList<>();
+list.add("dog");
+list.add("cat");
+list.add("frog");
+
+*	a.  list.contains("cat")
+	b.  list.hasObject("cat")
+*	c.  list.indexOf("cat")
+	d.  list.indexOf(1)
