@@ -121,3 +121,20 @@ The order of initializing:
 3. The assignment of instance variables initializers
 4. The execution of initialization blocks
 5. The code within a constructor
+
+POLYMORPHISM -> is the result of overriding methods of a base class.
+
+/*
+##################################################
+A significant part of becoming a skilled Java programmer is 
+learning to find, understand, and use those classes found in 
+libraries relevant to your application's domain.
+##################################################
+*/
+
+OVERLOADING VS. OVERRIDING
+
+Characteristic 	Overloading 	Overriding
+Method name 	Same 			Same
+Signature 		Different 		Same
+Class 			Same class 		In a derived class

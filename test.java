@@ -9,10 +9,15 @@ public class test {
                 for (Integer i : myIt)
                     System.out.println("i: " + i);*/
 
-        int h = 0;
-        while ((h = 12) != 5) {
-            System.out.println("Infinite");
-        }
+        // int h = 0;
+        // while ((h = 12) != 5) {
+        //     System.out.println("Infinite");
+        // }
+
+        Employee e1 = new Employee();
+        Employee e2 = new SalaryEmployee();
+
+        System.out.println ("Employee: " + e1.computePay()  + "\t SalaryEmployee: " + e2.computePay());
 
         // CONTINUE OP
         for (int i = 0; i < 3; i++) {
@@ -54,6 +59,19 @@ public class test {
     }
 }
 
+class Employee {
+    float pay = 25;
+
+    public float computePay() {
+        return (pay * 40);
+    }
+}
+
+class SalaryEmployee extends Employee {
+    public float computePay () {
+        return (pay * 40 * 1.10f);
+    }
+}
 /**
 The class which makes the magic of the iteration
 */
