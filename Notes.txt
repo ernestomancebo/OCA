@@ -113,3 +113,11 @@ Initializing variables members:
 Instance variable initializers
 Initialization block (Before the constructor)
 Constructor
+
+The order of initializing: 
+
+1. The zeroing of fields performed when the object is instantiated
+2. The initialization of final and static variables
+3. The assignment of instance variables initializers
+4. The execution of initialization blocks
+5. The code within a constructor
