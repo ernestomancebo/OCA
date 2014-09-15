@@ -9,7 +9,12 @@ public class test {
                 for (Integer i : myIt)
                     System.out.println("i: " + i);*/
 
-        // CONTINUE
+        int h = 0;
+        while ((h = 12) != 5) {
+            System.out.println("Infinite");
+        }
+
+        // CONTINUE OP
         for (int i = 0; i < 3; i++) {
             if (i < 2 ) {
                 System.out.println("Lower");

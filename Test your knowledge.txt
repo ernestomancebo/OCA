@@ -13,7 +13,7 @@ System.out.println(argv[1]);
 }
 }
 
-*	a.  world
+*   a.  world
 	b.  hello
 	c.  hello world
 	d.  ArrayIndexOutOfBoundsExceptionis thrown
@@ -31,10 +31,10 @@ SomeClass sc = new SomeClass();
 
 Which of the following statements will compile without syntax or runtime errors if they replace the comment line?
 
-*	a.  sc.i = 5;
-*	b.  int j = sc.i;
+*   a.  sc.i = 5;
+*   b.  int j = sc.i;
 	c.  sc.i = 5.0;
-*	d.  System.out.println(sc.i);
+*   d.  System.out.println(sc.i);
 
 /*
 ##################################################
@@ -58,16 +58,16 @@ System.out.println(i);
 
 	a.  35 will be printed out
 	b.  45 will be printed out
-*	c.  A compile time error will be generated
+*   c.  A compile time error will be generated
 	d.  An exception will be thrown 
 
 2.  Which of the following lines will compile without warning or error?
 
 	a.  char d="d";
 	b.  float f=3.1415;
-*	c.  int i=34;
+*   c.  int i=34;
 	d.  byte b=257;
-*	e.  boolean isPresent=true;
+*   e.  boolean isPresent=true;
 
 3.  Given the following declaration:
 
@@ -82,10 +82,10 @@ SomeClass sc = new SomeClass();
 Which of the following statements are correct if they replace the 
 comment line?
 
-*	a.  System.out.println(i);
-*	b.  System.out.println(sc.i);
+*   a.  System.out.println(i);
+*   b.  System.out.println(sc.i);
 	c.  System.out.println(SomeClass.i);
-*	d.  System.out.println((new SomeClass()).i);
+*   d.  System.out.println((new SomeClass()).i);
 
 4.  Given the following declaration:
 
@@ -93,16 +93,16 @@ StringBuilder sb = new StringBuilder;
 
 Which of the following are valid uses of the sb variable?
 
-*	a.  sb.append(34.5);
+*   a.  sb.append(34.5);
 	b.  sb.deleteCharAt(34.5);
 	c.  sb.toInteger(3);
-*	d.  sb.toString();
+*   d.  sb.toString();
 
 5.  Which of the following will return the position of the first letter 'a' where the 
 string s contains "banana"?
 
 	a.  lastIndexOf(2,s);
-*	b.  s.indexOf('a');
+*   b.  s.indexOf('a');
 	c.  s.charAt(2);
 	d.  indexOf(s,'v');
 
@@ -118,7 +118,7 @@ System.out.println("Not equal");
 
 	a.  s1==s2
 	b.  s1.matchCase(s2)
-*	c.  s1.equalsIgnoreCase(s2)
+*   c.  s1.equalsIgnoreCase(s2)
 	d.  s1.equals(s2)
 
 /*
@@ -127,45 +127,45 @@ Chapter 3
 ##################################################
 */
 
-1.	 What is the result of the following operation?
+1.   What is the result of the following operation?
 System.out.println(4 % 3);
 
-	a.	 0
-*	b.	 1
-	c.	 2
-	d.	 3
+	a.   0
+*   b.   1
+	c.   2
+	d.   3
 
-2.	 Which of the following expressions will evaluate to 7?
+2.   Which of the following expressions will evaluate to 7?
 
-*	a.	 2 + 4 * 3- 7
-	b.	 (2 + 4) * (3 - 7)
-	c.	 2 + (4 * 3) - 7
-	d.	 ((2 + 4) * 3) - 7)
+*   a.   2 + 4 * 3- 7
+	b.   (2 + 4) * (3 - 7)
+	c.   2 + (4 * 3) - 7
+	d.   ((2 + 4) * 3) - 7)
 
-3.	 What is the output of the following statement?
+3.   What is the output of the following statement?
 System.out.println( 16 >>> 3);
 
-	a.	 1
-*	b.	 2
-	c.	 4
-	d.	 8
+	a.   1
+*   b.   2
+	c.   4
+	d.   8
 
 1 0000
 0 0010
 
-4.	 Given the following declarations, which of the following if statements will
+4.   Given the following declarations, which of the following if statements will
 compile without errors?
 
 int i = 3;
 int j = 3;
 int k = 3;
 
-*	a.	 if(i > j) {}
-	b.	 if(i > j > k) {}
-*	c.	 if(i > j && i > k) {}
-	d.	 if(i > j && > k) {}
+*   a.   if(i > j) {}
+	b.   if(i > j > k) {}
+*   c.   if(i > j && i > k) {}
+	d.   if(i > j && > k) {}
 
-5.	 What will be printed out when the following code is executed?
+5.   What will be printed out when the following code is executed?
 
 switch (5) {
 case 0:
@@ -179,10 +179,10 @@ case 2:
 System.out.println("two");
 }
 
-	a.	 one
-*	b.	 default and two
-	c.	 one, two, and default
-	d.	 Nothing, a compile-time error is generated
+	a.   one
+*   b.   default and two
+	c.   one, two, and default
+	d.   Nothing, a compile-time error is generated
 
 /*
 ##################################################
@@ -192,16 +192,16 @@ Chapter 4
 
 1.  Which of the following statements will compile without an error?
 
-*	a.  int arr[];
+*   a.  int arr[];
 	b.  int arr[5];
 	c.  int arr[5] = {1,2,3,4,5};
-*	d.  int arr[] = {1,2,3,4,5};
+*   d.  int arr[] = {1,2,3,4,5};
 
 2.  Which of the following declares an array that supports two rows and a 
 variable number of columns?
 
 	a.  int arr[][] = new int[2][3];
-*	b.  int arr[][] = new int[2][];
+*   b.  int arr[][] = new int[2][];
 	c.  int arr[][] = new int[][];
 	d.  int arr[][] = new int[][3];
 
@@ -213,7 +213,96 @@ list.add("dog");
 list.add("cat");
 list.add("frog");
 
-*	a.  list.contains("cat")
+*   a.  list.contains("cat")
 	b.  list.hasObject("cat")
-*	c.  list.indexOf("cat")
+*   c.  list.indexOf("cat")
 	d.  list.indexOf(1)
+
+/*
+##################################################
+Chapter 5
+##################################################
+*/
+
+1.   Given the following declarations, which of the following statement will
+compile?
+int i = 5;
+int j = 10;
+
+*	a.   while(i < j) {}
+	b.   while(i) {}
+	c.   while(i = 5) {}
+*	d.   while((i = 12)!=5) {}
+
+2.   Given the following declaration of an array, which statement will display
+each element of the array?
+
+int arr[] = {1,2,3,4,5};
+
+	a.   for(int n : arr[]) { System.out.println(n);
+		}
+*	b.   for(int n : arr) { System.out.println(n);
+		}
+	c.   for(int n=1; n < 6; n++) { System.out.println(arr[n]);
+		}
+	d.   for(int n=1; n <= 5; n++) {
+		 System.out.println(arr[n]);
+		}
+
+3.   Which of the following do/while loops will compile without errors?
+	
+*	a.  int i = 0;
+		do {
+		System.out.println(i++);
+		} while (i < 5);
+*	b.  int i = 0;
+		do
+		System.out.println(i++);
+		while (i < 5);
+	c.  int i = 0;
+		do
+		System.out.println(i++);
+		while i < 5;
+	d.  i = 0;
+		do
+		System.out.println(i);
+		i++;
+		while (i < 5)
+
+4.   Which of the following loops are equivalent?
+
+*	a.   for(String n : list) {
+	System.out.println(n);
+	}
+
+*	b.   for(int n = 0; n < list.size(); n++ ){
+	System.out.println(list.get(n));
+	}
+
+*	c.   Iterator it = list.iterator();
+	while(it.hasNext()) {
+	System.out.println(it.next());
+	}
+
+5.   What will be output by the following code?
+
+int i;
+int j;
+for (i=1; i < 4; i++) {
+for (j=2; j < 4; j++) {
+if (j == 3) {
+continue;
+}
+System.out.println("i: " + i + " j: " + j);
+}
+}
+
+*	a. i: 1 j: 2
+	   i: 2 j: 2
+	   i: 3 j: 2
+	b. i: 1 j: 3
+	   i: 2 j: 3
+	   i: 3 j: 3
+	c. i: 1 j: 1
+	   i: 2 j: 1
+	   i: 3 j: 1

@@ -68,3 +68,48 @@ useful construct for solving some problems and a problematic construct when used
 
 Multiplying by 1.0f is necessary to avoid integer division:
 	average = total / (age.length * 1.0f);
+
+Pitfall with decimals when comparing -> The number 0.1 cannot be stored precisely in base two in the same way that the
+decimal equivalent of the fraction 1/3 cannot be represented exactly (0.333333...). The same goes to 0.1 and 0.10000
+
+There are four uses of the this keyword:
+•	 Performing constructor chaining
+•	 Accessing instance variables
+•	 Passing the current object to a method
+•	 Returning the current object from a method
+
+The parameters will have "precedence" over the instance variables.
+
+Another approach is to declare the parameter as a constant using the final keyword, as shown in the following code snippet. When we take this approach, a syntax error is generated because we are trying to modify the parameter.
+
+•	 Argument: This is the variable being passed
+•	 Parameter: This is the element defined within the method's signature
+
+Java do passing by value: When a method is called, a copy of the argument is assigned to the parameter.
+
+When a primitive data type is passed, he original data is not changed.
+When a reference variable is passed, we have two references to the same object; We can modify the object using either reference variable
+
+Variable number of args:
+
+•	 The variable number of parameters must all be the same type
+•	 They are treated as an array within the method
+•	 They must be the last parameter of the method
+
+To create an immutable object:
+
+•	 Make the class final which means that it cannot be extended (covered in
+the Using the final keyword with classes section in Chapter 7, Inheritance and
+Polymorphism)
+•	 Keep the fields of the class private and ideally final
+•	 Do not provide any methods that modify the state of the object, that is do not
+provide setter or similar methods
+•	 Do not allow mutable field objects to be changed
+
+As a general rule, always add a default constructor to a class. This is particularly important when the class is a base class.
+
+Initializing variables members:
+
+Instance variable initializers
+Initialization block (Before the constructor)
+Constructor
