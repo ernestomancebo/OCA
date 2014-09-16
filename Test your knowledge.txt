@@ -306,3 +306,78 @@ System.out.println("i: " + i + " j: " + j);
 	c. i: 1 j: 1
 	   i: 2 j: 1
 	   i: 3 j: 1
+
+/*
+##################################################
+Chapter 7
+##################################################
+*/
+
+
+1.	 Which set of statements result in ClassB and ClassC being derived
+from ClassA ?
+*	a.	 class ClassB extends ClassA {}
+	b.	 class ClassB extends ClassC {}
+	c.	 class ClassA extends ClassB {}
+*	d.	 class ClassC extends ClassB {}
+	e.	 No combination will work
+
+2.	 Which of the following must be true for a method to support polymorphism?
+*	a.	 The method must override a base class method
+	b.	 The method must overload a base class method
+*	c.	 The method's class must extend a base class that has the overridden method
+*	d.	 The method must execute against a base class reference variable
+
+3.	 What method is used to determine the type of an object?
+	a.	 isType
+	b.	 typeOf
+	c.	 instanceof
+*	d.	 instanceOf
+	
+4.	 Which of the following are valid casts?
+	a.	 num1 = num2;
+*	b.	 num1 = (int)num2;
+*	c.	 num1 = (float)num2;
+	d.	 num1(int) = num2;
+	
+5.	 Given the following class definitions:
+public class ClassA {
+public ClassA() {
+System.out.println("ClassA constructor");
+}
+public void someMethod() {
+System.out.println("ClassA someMethod");
+}
+}
+class ClassB extends ClassA {
+public ClassB() {
+System.out.println("ClassB constructor");
+}
+public void someMethod() {
+// comment
+System.out.println("ClassB someMethod");
+}
+public static void main(String args[]) {
+ClassB b = new ClassB();
+b.someMethod();
+}
+}
+What statement is needed at the comment line to generate the
+following output:
+ClassA constructor
+ClassB constructor
+ClassA someMethod
+ClassB someMethod
+
+
+	a.	 super();
+	b.	 super().someMethod;
+*	c.	 super.someMethod();
+	d.	 someMethod();
+	e.	 None of the above
+
+6.	 Which of the following statements are true?
+*	a.	 An abstract class must use the abstract keyword when declared
+	b.	 An abstract class must have one or more abstract methods
+*	c.	 An abstract class cannot extend a non-abstract class
+	d.	 An abstract class cannot implement an interface // IT CAN!!

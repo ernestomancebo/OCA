@@ -138,3 +138,19 @@ Characteristic 	Overloading 	Overriding
 Method name 	Same 			Same
 Signature 		Different 		Same
 Class 			Same class 		In a derived class
+
+It is not possible to call a base method above the current base class. 
+	super.super.toString(); //illegal
+
+The application of the instanceof operator confirms that the Employee class is 
+ultimately an object of Object. (instanceof chequea hasta lo ultimo!!)
+
+When a new class is created it is always a good idea to override the toString, equals, and hashCode methods.
+
+Before an object can be cloned, its class must implement the java.lang.Cloneable interface. The clone method is protected.
+
+When we cast a derived class object to a base class reference variable, it is called upcasting. When we cast a base class object to a derived class reference variable, it is called downcasting.
+
+Upcasting is possible because the derived object contains everything that the base class has, plus something more. Downcasting is not a good idea as the reference variable expects an object with more capabilities than is supplied. =(
+
+The use of the private and protected keywords cannot be used with a class definition unless the class is an inner class. An inner class is a class that is declared within another class.
