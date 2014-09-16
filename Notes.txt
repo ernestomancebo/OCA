@@ -154,3 +154,15 @@ When we cast a derived class object to a base class reference variable, it is ca
 Upcasting is possible because the derived object contains everything that the base class has, plus something more. Downcasting is not a good idea as the reference variable expects an object with more capabilities than is supplied. =(
 
 The use of the private and protected keywords cannot be used with a class definition unless the class is an inner class. An inner class is a class that is declared within another class.
+
+Checked exceptions include all exceptions derived from the Exceptionclass and are not derived from the RuntimeExceptionclass.
+Unchecked exceptions are all other exceptions. They include exceptions, such as division by zero and array subscripting errors.
+
+A general rule of thumb is to declare the exception as an unchecked exception if the client code cannot do anything to recover from the exception. Otherwise, if they can handle it, make it a checked exception.
+
+There are three general techniques we can use when dealing with exceptions in Java:
+•  Traditional tryblock
+•  The new "try-with-resources" block introduced in Java 7
+•  Pass the buck
+
+finally block will not execute if the System.exit method is invoked in a try or catch block.
