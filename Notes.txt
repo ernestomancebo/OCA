@@ -166,3 +166,7 @@ There are three general techniques we can use when dealing with exceptions in Ja
 •  Pass the buck
 
 finally block will not execute if the System.exit method is invoked in a try or catch block.
+
+The general rule is always to list the "most-derived" EXCEPTIONS first. 
+
+Keep in mind that tHE CATCH BLOCK'S PARAMETER IS IMPLICITLY FINAL. It is not possible to assign a different exception to the parameter.
