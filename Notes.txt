@@ -170,3 +170,18 @@ finally block will not execute if the System.exit method is invoked in a try or 
 The general rule is always to list the "most-derived" EXCEPTIONS first. 
 
 Keep in mind that tHE CATCH BLOCK'S PARAMETER IS IMPLICITLY FINAL. It is not possible to assign a different exception to the parameter.
+
+A try block needs either a catch block or a finally block. Without one or both a compile time error will be generated.
+
+Exceptions guidelines (10 coommandments):
+	Repeating code that threw an exception
+	Being specific in which exception you are catching
+	Not lose the stack trace
+	Scoping and block lengths
+	Throwing a UnsupportedOperationException object
+	DO NOT Ignore exceptions
+	Handle exceptions as late as you can (apropiated level)
+	NOT Catching too much in a single block
+	Logging exceptions
+	Do not use exceptions to control normal logic flow
+	Do not try to handle unchecked exceptions

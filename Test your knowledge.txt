@@ -381,3 +381,63 @@ ClassB someMethod
 	b.	 An abstract class must have one or more abstract methods
 *	c.	 An abstract class cannot extend a non-abstract class
 	d.	 An abstract class cannot implement an interface // IT CAN!!
+
+/*
+##################################################
+Chapter 8
+##################################################
+*/
+
+
+1.	 Which of the following implement checked exceptions?
+*	a.	 Class A extends RuntimeException
+	b.	 Class A extends Throwable
+	c.	 Class A extends Exception
+*	d.	 Class A extends IOException
+
+2.	 Given the following set of classes:
+
+class Exception A extends Exception {}
+class Exception B extends A {}
+class Exception C extends A {}
+class Exception D extends C {}
+
+What is the correct sequence of catch blocks for the following try block:
+
+try {
+// method throws an exception of the above types
+}
+
+	a.	 Catch A , B , C , and D
+*	b.	 Catch D , C , B , and A
+*	c.	 Catch D , B , C , and A
+	d.	 Catch C , D , B , and A
+
+3.	 Which of the following statements are true?
+	a.	 Checked exceptions are those derived from the Error class.
+	b.	 Checked exceptions should normally be ignored as we cannot not
+	handle them.
+*	c.	 Checked exceptions must be re-thrown.
+*	d.	 Checked exceptions should be handled at the appropriate method in
+	the call stack.
+
+4.	 When a method throws a checked exception which of the following are
+valid responses?
+
+*	a.	 Place the method in a try-catch block.
+	b.	 Do not use these types of methods.
+	c.	 Do nothing as we normally cannot handle checked exceptions.
+*	d.	 Use the throws clause on the method which calls this method.
+
+5.	 What exceptions may the following code generate at runtime?
+String s;
+int i = 5;
+try{
+i = i/0;
+s += "next";
+}
+
+	a.	 ArithmeticException
+*	b.	 DivisionByZeroException
+	c.	 FileNotFoundException
+	d.	 NullPointerException
