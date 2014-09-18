@@ -441,3 +441,35 @@ s += "next";
 *	b.	 DivisionByZeroException
 	c.	 FileNotFoundException
 	d.	 NullPointerException
+
+/*
+##################################################
+Chapter 9
+##################################################
+*/
+
+1.  Which of the following will compile without an error?
+*	a.  package somepackage;
+	import java.nio.*;
+	class SomeClass {}
+	b.  import java.nio.*;
+	package somepackage;
+	class SomeClass {}
+	c.  /*This is a comment */
+	package somepackage;
+	import java.nio.*;
+	class SomeClass {}
+
+2.  For a hierarchy of a resource property file, if a key is missing from one of the 
+derived files, which of the following are true about the value returned, based 
+on a missing key?
+	a.  The return value will be an empty string
+	b.  The return value will be a null value
+*	c.  The return value will be a string from a base resource bundle
+	d.  A runtime exception will be thrown
+
+3.  Which exception is not thrown by the forName method:
+	a.  InstantiationException
+	b.  ClassNotFoundException
+*	c.  ClassDoesNotExistException
+	d.  IllegalAccessException
