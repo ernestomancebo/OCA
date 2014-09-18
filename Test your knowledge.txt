@@ -82,7 +82,7 @@ SomeClass sc = new SomeClass();
 Which of the following statements are correct if they replace the 
 comment line?
 
-*   a.  System.out.println(i);
+*   a.  System.out.println(i); //WRONG
 *   b.  System.out.println(sc.i);
 	c.  System.out.println(SomeClass.i);
 *   d.  System.out.println((new SomeClass()).i);
@@ -94,7 +94,7 @@ StringBuilder sb = new StringBuilder;
 Which of the following are valid uses of the sb variable?
 
 *   a.  sb.append(34.5);
-	b.  sb.deleteCharAt(34.5);
+	b.  sb.deleteCharAt(34.5); //WRONG
 	c.  sb.toInteger(3);
 *   d.  sb.toString();
 
@@ -139,7 +139,7 @@ System.out.println(4 % 3);
 
 *   a.   2 + 4 * 3- 7
 	b.   (2 + 4) * (3 - 7)
-	c.   2 + (4 * 3) - 7
+	c.   2 + (4 * 3) - 7 //WRONG
 	d.   ((2 + 4) * 3) - 7)
 
 3.   What is the output of the following statement?
@@ -234,8 +234,7 @@ int j = 10;
 	c.   while(i = 5) {}
 *	d.   while((i = 12)!=5) {}
 
-2.   Given the following declaration of an array, which statement will display
-each element of the array?
+2.   Given the following declaration of an array, which statement will display each element of the array?
 
 int arr[] = {1,2,3,4,5};
 
@@ -244,10 +243,10 @@ int arr[] = {1,2,3,4,5};
 *	b.   for(int n : arr) { System.out.println(n);
 		}
 	c.   for(int n=1; n < 6; n++) { System.out.println(arr[n]);
-		}
+		} //WRONG
 	d.   for(int n=1; n <= 5; n++) {
 		 System.out.println(arr[n]);
-		}
+		} //WRONG
 
 3.   Which of the following do/while loops will compile without errors?
 	
@@ -283,6 +282,7 @@ int arr[] = {1,2,3,4,5};
 	while(it.hasNext()) {
 	System.out.println(it.next());
 	}
+//WRONG -- MISSING D 
 
 5.   What will be output by the following code?
 
@@ -309,6 +309,118 @@ System.out.println("i: " + i + " j: " + j);
 
 /*
 ##################################################
+Chapter 6
+##################################################
+*/
+
+1.  Which of the following declares a method that takes a float and an integer returns an array of integers?
+
+*	a.  public int[] someMethod(int i, float f) 
+	{ return new int[5];}
+	b.  public int[] someMethod(int i, float f) 
+	{ return new int[];}
+*	c.  public int[] someMethod(int i, float f) 
+	{ return new int[i];}
+	d.  public int []someMethod(int i, float f) 
+	{ return new int[5];} //WRONG
+
+2.  What happens if you try to compile and run the following code:
+
+public class SomeClass { 
+public static void main(String arguments[]) {
+someMethod(arguments);
+}
+public void someMethod(String[] parameters) {
+System.out.println(parameters);
+}
+}
+
+	a.  Syntax error – main is not declared correctly.
+	b.  Syntax error – the variable parameters cannot be used as it is in the 
+	println method.
+*	c.  Syntax error – someMethod needs to be declared as static.
+	d.  The program will execute without errors.
+
+3.  Which of the following statements about overloaded methods are true?
+
+	a.  Static methods cannot be overloaded.
+*	b.  The return value is not considered when overloading a method.
+	c.  Private methods cannot be overloaded.
+	d.  An overloaded method cannot throw exceptions.
+
+4.  Given the following code, which of the following statements are true?
+
+public class SomeClass { 
+public SomeClass(int i, float f) { } 
+public SomeClass(float f, int i) { }
+public SomeClass(float f) { }
+public void SomeClass() { }
+}
+
+	a.  A syntax error will occur because void cannot be used with 
+	a constructor.
+	b.  A syntax error will occur because the first two constructors are 
+	not unique.
+*	c.  The class does not have a default constructor.
+*	d.  No syntax errors will be generated.
+
+5.  Which of the following keywords cannot be used when declaring a class?
+
+	a.  public
+	b.  private
+*	c.  protected //WRONG
+*	d.  package
+
+6.  Assuming that the following classes are in the same package, which statements are true?
+
+class SomeClass { 
+void method1() { } 
+public void method2( { }
+private void method3( { }
+protected void method4() { }
+}
+class demo [
+public void someMethod(String[] parameters) { 
+SomeClass sc = new SomeClass();
+sc.method1();
+sc.method2();
+sc.method3();
+sc.method41(); 
+}
+}
+
+	a.  sc.method1()will generate a syntax error.
+*	b.  sc.method2()will generate a syntax error.
+*	c.  sc.method3()will generate a syntax error.
+	d.  sc.method4()will generate a syntax error.
+	e.  No syntax errors will be generated.
+
+7.  What is the output of the following code?
+
+public static void main(String args[]) { 
+String s = "string 1";
+int i = 5;
+someMethod1(i);
+System.out.println(i);
+someMethod2(s);
+System.out.println(s);
+}
+public static void someMethod1(int i) { 
+System.out.println(++i);
+}
+public static void someMethod2(String s) { 
+s = "string 2"; 
+System.out.println(s);
+}
+
+	a.  5 5 string 2 string 1
+	b.  6 6 string 2 string 2
+	c.  5 5 string 2 string 2
+*	d.  6 5 string 2 string 1
+
+
+/*
+##################################################
 Chapter 7
 ##################################################
 */
@@ -325,7 +437,7 @@ from ClassA ?
 2.	 Which of the following must be true for a method to support polymorphism?
 *	a.	 The method must override a base class method
 	b.	 The method must overload a base class method
-*	c.	 The method's class must extend a base class that has the overridden method
+*	c.	 The method's class must extend a base class that has the overridden method //WRONG
 *	d.	 The method must execute against a base class reference variable
 
 3.	 What method is used to determine the type of an object?
@@ -337,7 +449,7 @@ from ClassA ?
 4.	 Which of the following are valid casts?
 	a.	 num1 = num2;
 *	b.	 num1 = (int)num2;
-*	c.	 num1 = (float)num2;
+*	c.	 num1 = (float)num2; //WRONG - I DON'T THINK SO...
 	d.	 num1(int) = num2;
 	
 5.	 Given the following class definitions:
@@ -379,7 +491,7 @@ ClassB someMethod
 6.	 Which of the following statements are true?
 *	a.	 An abstract class must use the abstract keyword when declared
 	b.	 An abstract class must have one or more abstract methods
-*	c.	 An abstract class cannot extend a non-abstract class
+*	c.	 An abstract class cannot extend a non-abstract class //WRONG IT CAN
 	d.	 An abstract class cannot implement an interface // IT CAN!!
 
 /*
@@ -409,15 +521,15 @@ try {
 }
 
 	a.	 Catch A , B , C , and D
-*	b.	 Catch D , C , B , and A
+*	b.	 Catch D , C , B , and A //WRONG
 *	c.	 Catch D , B , C , and A
-	d.	 Catch C , D , B , and A
+	d.	 Catch C , D , B , and A //WRONG
 
 3.	 Which of the following statements are true?
 	a.	 Checked exceptions are those derived from the Error class.
 	b.	 Checked exceptions should normally be ignored as we cannot not
 	handle them.
-*	c.	 Checked exceptions must be re-thrown.
+*	c.	 Checked exceptions must be re-thrown. //WRONG - should be handled
 *	d.	 Checked exceptions should be handled at the appropriate method in
 	the call stack.
 
@@ -437,10 +549,10 @@ i = i/0;
 s += "next";
 }
 
-	a.	 ArithmeticException
-*	b.	 DivisionByZeroException
+	a.	 ArithmeticException //WRONG 
+*	b.	 DivisionByZeroException //WRONG doen't exists
 	c.	 FileNotFoundException
-	d.	 NullPointerException
+	d.	 NullPointerException //WRONG s isn't initialized
 
 /*
 ##################################################
@@ -455,7 +567,7 @@ Chapter 9
 	b.  import java.nio.*;
 	package somepackage;
 	class SomeClass {}
-	c.  /*This is a comment */
+	c.  /*This is a comment */ //WRONG - comments may appear
 	package somepackage;
 	import java.nio.*;
 	class SomeClass {}
