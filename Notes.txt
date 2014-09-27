@@ -185,3 +185,86 @@ Exceptions guidelines (10 coommandments):
 	Logging exceptions
 	Do not use exceptions to control normal logic flow
 	Do not try to handle unchecked exceptions
+
+Simulator:
+
+Exceptions:
+	When you use System.out.println(exception), a stack trace is not printed. Just the name of the exception class and the message is printed. When you use exception.printStackTrace()
+	You are throwing an exception and there is no try or catch block, or a throws clause. So it will not compile
+
+	Checked exceptions:
+	exceptional conditions external to an application that a well written application should anticipate and from which it can recover.
+	Note that here recovery doesn't necessarily mean to keep functioning normally. It means that the program shouldn't just crash. If it absolutely cannot proceed, it should notify the user appropriately and then end gracefully.
+
+Working with Inheritance:
+	Remember that member variables are shadowed and not overridden.
+	The getClass method always returns the Class object for the actual object on which the method is called irrespective of the type of the reference.
+	/* CHAINED CONSTRUCTOR */
+	Observer that method startUp(String s) of CorbaComponent is overridden by the subclass OrderManager.  When an object of class OrderManager is constructed, the default no args constructor of CorbaComponent is called. This constructor calls the startUp(String s) with "IOR" as parameter. Now, there are two eligible methods which can be called - CorbaComponent's startUp and OrderManager's startUp.  The method selection is done on the basis of the actual class of the object (which is OrderManager here). So OrderManager's startUp is called, which sets the ior variable to URL://IOR.  Unlike instance method selection, variable (and static method) selection is done on the basis of declared class of the variable and not on the actual class of object that it is referring to.
+	Class B's default constructor looks like this: public B() {} However, Constructors implicitly (if an explicit call to the superclass's constructor is not present) call their superclass's constructor super().
+	Since Truck is a subclass of Automobile, a = t will be valid at compile time as well runtime. But a cast is needed to make for t = (Truck) a
+	The rule is that an overriding method cannot throw an exception that is a super class of the exception thrown by the overridden method.
+	b instanceof Flyer will not compile because the compiler knows that it is not possible for b to point to an object of a class that implements Flyer.
+
+	HAVING AMBIGUOUS FIELDS or methods does not cause any problems by itself but referring to such fields/methods in an ambiguous way will cause a compile time error. So you cannot call : System.out.println(VALUE); because it will be ambiguous (there are two VALUE definitions). But the following lines are valid :  TestClass tc = new TestClass(); System.out.println(( ( T1) tc).VALUE);
+	The overriding method must have same return type in case of primitives (a subclass is allowed in case of classes)  (Therefore, the choices returning int are not valid.) and the parameter list must be the same (The name of the parameter does not matter, just the Type is important). Having no throws clause is also valid since an empty set is a valid subset. 
+	B's toString will be called no matter what reference you use
+
+	The return type should be same for overridden and overriding method.
+	Unlike a class, an interface can extend from multiple interfaces.
+	WATCH OUT THE MODIFIERS FOR CONSTRUCTORS!!
+	An overriding method cannot throw a superclass exception, while a constructor of a subclass cannot throw subclass exception (Assuming that the same exception or its super class is not present in the subclass constructor's throws clause). 
+
+Working with methods:
+	There is no 'this' available in main so none of the this.x are valid.
+	Finals variables you can initialize it in the constructor, in line or an instance block
+	In cases where multiple methods are applicable, the compiler always calls the most specific one
+
+	Primitive, Wrappers and var-args arguments rules:  
+	1. The compiler always tries to choose the most specific method available with least number of modifications to the arguments.  
+	2. Java designers have decided that old code should work exactly as it used to work before boxing-unboxing functionality became available.  
+	3. Widening is preferred to boxing/unboxing (because of rule 2), which in turn, is preferred over var-args.
+
+	It is never bound to probe(Long ) because Integer and Long are different object types and there is no IS-A relation between them.
+	Order of initialization:
+	First, static statements/blocks are called IN THE ORDER they are defined. (Hence, a and c will be printed.)
+	Next, instance initializer statements/blocks are called IN THE ORDER they are defined. Finally, the constructor is called. So, then it prints b.
+
+	toString() in Object class:
+	The Object class's toString generates a string using:  getClass().getName() + '@' + Integer.toHexString(hashCode()) But in this case, String class overrides the toString() method that returns just the actual string value.
+
+Loops:
+	
+	MAP DOES NOT IMPLEMENT COLLECTION INTERFACE, though you can use Map.getKeySet() or Map.values() to get a Collection and then iterate over that Collection.
+	A keyword and so cannot be used as a label, but you can use a class name
+	With an enhanced for:
+		Cannot use an existing/predefined variable in the variable declaration part.
+		final is the only modifier (excluding annotations) that is allowed here.
+	You can't use a if-else with "break/continue" statement before statements, because the rest of the statements in the for loop are unreachable and so the code will not compile.
+
+Arrays:
+	You cannot specify the size on left hand side
+	The arraycopy method basically copies an array from the specified source array, beginning at the specified position, to the specified position of the destination array. The last parameter is the number of elements that you want to copy. 
+
+Operation an decision constructs:
+	The boolean operators have more precedence than =. (In fact, = has least precedence of all operators.)
+	the += operator is expanded to the operation i.e.: k = 1; k += 2 === k = 1 + 2; 
+	INTEGER DIVISION: (5/4) performs integer division because both 5 and 4 are integers, resulting in the value 1
+	Char sum: ( 'a' + 1 ) will be promoted to int => 97 + 1 = 98
+
+Java data types:
+	charAt(): it takes an int and char will be implicitly promoted to int.
+	charAt(): As per the API documentation for charAt, it throws IndexOutOfBoundsException if you pass an invalid value.
+	Objects creations: two news => two objects. t1, t2, t3, t4 => 4 references.
+	You can only assign true or false to a boolean variable.
+
+Java basics:
+	Java does not allow chained initialization in declaration so option 1 and 5 are not valid.
+	A package statement can never have a *. It should specify the exact package name.
+	The order of keywords for a STATIC IMPORT MUST BE "import static ... ".
+	You can either import all the static member or one specific
+	FINAL is a valid modifier for the standard main method, although static methods can never be overridden, they can be shadowed.
+	Since the method is static, this access will only be valid if variable 'a' is declared static within the class. (A is instance var)
+	'this' is inmutable
+	using 'this' to acces to a static var is not an error
+	locals/method vars have to be explicitly initialized.
