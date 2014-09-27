@@ -213,7 +213,10 @@ Working with Inheritance:
 	The return type should be same for overridden and overriding method.
 	Unlike a class, an interface can extend from multiple interfaces.
 	WATCH OUT THE MODIFIERS FOR CONSTRUCTORS!!
-	An overriding method cannot throw a superclass exception, while a constructor of a subclass cannot throw subclass exception (Assuming that the same exception or its super class is not present in the subclass constructor's throws clause). 
+	An overriding method cannot throw a superclass exception, while a constructor of a subclass cannot throw subclass exception (Assuming that the same exception or its super class is not present in the subclass constructor's throws clause).
+	A constructor can't be final.
+	The constructor can take the same type as a parameter.
+	By passing null as argument, the compiler calls the one most especific (in hierarchy); null can be passed as both StringBuffer and String and none is more specific than the other. So, it will not compile. 
 
 Working with methods:
 	There is no 'this' available in main so none of the this.x are valid.
