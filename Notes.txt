@@ -173,6 +173,13 @@ Keep in mind that tHE CATCH BLOCK'S PARAMETER IS IMPLICITLY FINAL. It is not pos
 
 A try block needs either a catch block or a finally block. Without one or both a compile time error will be generated.
 
+For work with try-with-resources, the class must implement [java.lang.AutoCloseable] and it uses the concept of: Automated Resource Management(ARM).
+Bear in mind that the resources declared with a try-with-resources block are separated by semicolons. 
+
+For AutoCloseable classes, always implement the close method and supply specific exceptions. This provides the user with more meaningful feedback concerning the underlying problem. Also, do not throw an InterruptedException. Runtime problems can occur if the InterruptedException has been suppressed.
+
+An idempotentmethod is the one where repeated execution of the method will not cause problems
+
 Exceptions guidelines (10 coommandments):
 	Repeating code that threw an exception
 	Being specific in which exception you are catching
